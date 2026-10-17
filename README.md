@@ -23,6 +23,15 @@ results are in `FINDINGS.md`, `results/VERDICT.md` or `results/scoring.md`. The 
 after the runs, so the git history does not timestamp the pre-registrations; the dates in the files do.
 Corrections made after red-team reviews are recorded in the findings files themselves.
 
+## What these results point to
+Translation of the coverage is at ceiling; what remains are readings: points the policy text does not settle and that
+different models mostly settle silently in the same way. Three questions follow:
+1. Which of the readings a model lists for an encoded rule change outcomes for realistic questions? The encoding
+   carries each reading as a named parameter and computes this exhaustively.
+2. Which of those does the text, case law, official guidance or the insurer's recorded answer settle, and how often
+   does a model's choice agree?
+3. Where nothing settles a reading, do law-trained readers agree which reading is defensible?
+
 ## Not included (third-party material, fetch it yourself)
 - CodeX encoding and reference documents: https://github.com/codexstanford/cardinal-care-encoding (no licence
   declared). Clone into `data/cardinal-care-encoding/`. The Python port of the expert encoding (`src/expert.py`), which

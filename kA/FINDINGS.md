@@ -68,3 +68,62 @@ partner, where the field is void, were counted as F6. Fixed in `evaluate_A.py` a
   of three), and less on F1/P3. The cleaner direction evidence is the direct-answer run (`DIRECTION_NOTE.md`).
 - "No unattributed strict-slack cases" is close to true by construction: the grid varies mainly the features the six
   predicates name. It is not evidence that no other open points exist (member_1's birthday reading is one).
+
+## Further model families (2026-10-17)
+Pre-registered as addenda in `PREREGISTRATION.md` before each run. Encodings in `encodings_gemini/` (Gemini 3.8 Flash,
+original prompt), `encodings_gpt/` (GPT-6.1 Sol, original prompt), `encodings_gpt_r2/` (GPT-6.1 Sol, amended prompt)
+and `encodings_astra/` (GPT-6 Astra, amended prompt). Summaries in `results/summary_<label>.md`. API cost: $2.21.
+
+| Run | Inadmissible role encodings | Strict slack | Points recovered (strict) | Member >= insurer | Verdict |
+|---|---|---|---|---|---|
+| Claude (above) | 1 of 6 | 37,692 | 4 of 6 | yes | pass |
+| Gemini 3.8 Flash | 0 of 6 | 54,754 | 5 of 6 (all but F6) | yes, on all five | **replicates** |
+| GPT-6.1 Sol, original prompt | 5 of 6 | 0 | 0 | n/a | fails (instrument) |
+| GPT-6.1 Sol, amended prompt | 3 of 6 (all member) | 0 | 0 | n/a | **fails** (instrument) |
+| GPT-6 Astra, amended prompt | 3 of 6 (all member) | 0 | 0 | n/a | **fails** (instrument) |
+
+**Gemini.** 558 strict-slack cases match no recorded predicate; they split into 42 feature groups only because the
+grouping key includes the FSH pattern. All 558 share one feature: a woman with a male partner whose donor insemination
+cycles meet the table but whose months of intercourse do not meet the glossary (point D below). The pre-registered
+pass criterion of fewer than 20 new-point groups is therefore failed on its letter; the Gemini addendum's replication
+criteria do not include it.
+
+**GPT, original prompt.** Five of nine encodings return False for every claim (one raises on every claim): the text
+requires enrollment as a student or covered dependent, the interface has no such field, and the prompt says a missing
+field means the fact is unknown. Claude and Gemini assumed enrollment is checked elsewhere. This is a defect of my
+interface, found by the model; the amended prompt adds one sentence ("Enrollment as a student or covered dependent is
+also checked elsewhere"), disclosed as a deviation.
+
+**GPT, amended prompt.** All three member encodings, for both GPT models, read "You or your partner has not had a
+voluntary sterilization" as met when either person is unsterilized. CodeX examples `comprehensive_not_covered0b` and
+`9b` (patient sterilized, partner not) say not covered; the pre-registered F6 predicate covers only the reverse case,
+so these count as clear examples and the floor excludes every member encoding. As pre-registered, the GPT test fails.
+POST HOC, not evidence (`posthoc_sensitivity.py`): ignoring those two examples, the strict slack would be 96,496 cases
+on all six points with member > insurer on each.
+
+**Identical outcomes.** GPT-6.1 Sol and GPT-6 Astra wrote different code (hundreds of differing lines per file) yet give
+identical outcomes on all 1,814,400 cases for all nine encodings; within each role their three encodings are identical
+too. Gemini's nine encodings collapse to three outcome patterns: the three neutral encodings and member_3; member_1 and
+  member_2; the three insurer encodings. They are independent API calls at default sampling with different text, but the
+  Gemini slack of 54,754 cases is in effect one member reading against one insurer reading.
+
+## Cross-family comparison (descriptive, not pre-registered; `crossfamily.py`, `results/crossfamily.md`)
+- Neutral disagreement within a family: Claude 3,132 cases, Gemini 0, GPT 0. Across the three families' neutral
+  encodings: 39,700 cases, on F4 (34,560), F2 (3,300), F5 (2,924), F7 (1,438) and point D (678): the same points the
+  opposing-role slack finds.
+- This contradicts the earlier working assumption of the pilot that different model families mostly resolve these
+  points the same way, so that disagreement between neutral encodings cannot reveal them. It holds within a family,
+  not across families. On F4,
+  Claude's neutral encodings cover 13.3% of cells, Gemini's and GPT's none (the expert port: none).
+- Point D (donor cycles vs the glossary) is outside the six recorded points but not new to the pilot: the GPT-6 Astra
+  discovery prompt in `k2/` listed it first (numbered, not ranked) in all three runs, and the 10 Oct abstention test
+  flagged the same glossary-vs-table tension; it was left out of the kA key. Expert port and all Claude and GPT neutral encodings deny
+  it; Gemini's neutral and member encodings and one Claude member encoding (member_3) grant it.
+- GPT-6.1 Sol's direct answers in pilot experiment 4 granted coverage in all 8 F4 cases; GPT's encodings deny F4. The same
+  family resolves the point differently as answerer and as encoder (different prompts; not a controlled comparison).
+
+## Revised reading of the test
+Within one model, readings are nearly fixed, so disagreement among samples of one model shows few of them. Encodings
+for opposing parties (two of three families) and encodings by different families both reveal the same points. Which
+way an open point is decided depends on the model deployed. For GPT, the opposing-role instrument fails as
+pre-registered because the member side takes a reading CodeX's own tests settle.

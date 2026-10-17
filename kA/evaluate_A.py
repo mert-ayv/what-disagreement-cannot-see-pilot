@@ -1,6 +1,8 @@
 """Direction A test: admissibility, slack region, attribution to recorded points, direction.
 
-Usage: ../.venv/bin/python evaluate_A.py            (writes results/summary.md and results/preds.pkl)
+Usage: ../.venv/bin/python evaluate_A.py [label dir ...]
+  no arguments: the Claude encodings in encodings/ (writes results/summary.md and results/preds.pkl)
+  label dir ...: pools the encodings of the given directories (writes results/summary_<label>.md, preds_<label>.pkl)
 Pre-registration: PREREGISTRATION.md.
 """
 import copy
@@ -84,8 +86,8 @@ def run_one(path):
     return path.stem, [pred(c) for c, _ in g], {n: pred(c) for n, c in examples()}
 
 
-def main():
-    encs = sorted((HERE / "encodings").glob("*.py"))
+def main(label="", dirs=("encodings",)):
+    encs = sorted(p for d in dirs for p in (HERE / d).glob("*.py"))
     g = grid()
     ex = examples()
     expert.set_params({})
@@ -94,11 +96,13 @@ def main():
     ex_points = {n: points_of_example(c) for n, c in ex}
     with ProcessPoolExecutor(max_workers=3) as pool:
         res = list(pool.map(run_one, encs))
-    preds = {name: grid_p for name, grid_p, _ in res}
-    expreds = {name: ex_p for name, _, ex_p in res}
-    pickle.dump({"preds": preds, "ex": expreds}, open(HERE / "results" / "preds.pkl", "wb"))
+    res = [(p, r) for p, r in zip(encs, res)]
+    preds = {f"{r[0]}@{p.parent.name}" if len(dirs) > 1 else r[0]: r[1] for p, r in res}
+    expreds = {f"{r[0]}@{p.parent.name}" if len(dirs) > 1 else r[0]: r[2] for p, r in res}
+    suffix = f"_{label}" if label else ""
+    pickle.dump({"preds": preds, "ex": expreds}, open(HERE / "results" / f"preds{suffix}.pkl", "wb"))
 
-    L = ["# Direction A test: results", "", f"Grid: {len(g):,} cases. Encodings: {', '.join(p.stem for p in encs)}.", ""]
+    L = ["# Direction A test: results", "", f"Grid: {len(g):,} cases. Encodings: {', '.join(preds)}.", ""]
     # admissibility
     L += ["## Admissibility (CodeX comprehensive examples where the expert port's certificate-level outcome is the reference)", "",
           "| Encoding | Examples failed (clear) | Failed on recorded points | Grid crashes | Agreement with expert on grid |", "|---|---|---|---|---|"]
@@ -173,7 +177,7 @@ def main():
             return sum(sum(preds[n][k] is True for k in idx) for n in names) / (len(idx) * len(names))
         e = sum(ref_grid[k] for k in idx) / len(idx)
         L.append(f"| {p} | {e:.3f} | {share(byrole['neutral']):.3f} | {share(byrole['member']):.3f} | {share(byrole['insurer']):.3f} |")
-    (HERE / "results" / "summary.md").write_text("\n".join(L) + "\n")
+    (HERE / "results" / f"summary{suffix}.md").write_text("\n".join(L) + "\n")
     print("\n".join(L))
 
 
@@ -204,4 +208,7 @@ def points_of_example(c):
 
 if __name__ == "__main__":
     (HERE / "results").mkdir(exist_ok=True)
-    main()
+    if len(sys.argv) > 2:
+        main(sys.argv[1], sys.argv[2:])
+    else:
+        main()

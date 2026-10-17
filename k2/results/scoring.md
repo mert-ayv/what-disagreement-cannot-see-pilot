@@ -35,3 +35,7 @@ classification, lab corrections). Triage and validation by people who can judge 
 One coverage, one model family (OpenAI), three runs, the key has 7 items (three from CodeX encoder comments and issue #22, four from
 the pilot; the pilot items were found by analysis that a reader of the pilot report could know about, but the model
 received no pilot material). Scored by the author.
+
+Addendum (2026-10-17): in all three GPT-6 Astra runs, item 1 is whether the table's donor-insemination alternative
+overrides the glossary's intercourse requirement for a female with a male partner. It is not among the seven recorded
+choices and was not listed among the extras above; `kA/` later found it again through opposing-role encodings.

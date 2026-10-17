@@ -1,0 +1,66 @@
+# Direction A test: results
+
+Grid: 1,814,400 cases. Encodings: insurer_1, insurer_2, insurer_3, member_1, member_2, member_3, neutral_1, neutral_2, neutral_3.
+
+## Admissibility (CodeX comprehensive examples where the expert port's certificate-level outcome is the reference)
+
+| Encoding | Examples failed (clear) | Failed on recorded points | Grid crashes | Agreement with expert on grid |
+|---|---|---|---|---|
+| insurer_1 | 0 [] | 0 | 0 | 0.9860 |
+| insurer_2 | 0 [] | 0 | 0 | 0.9860 |
+| insurer_3 | 0 [] | 0 | 0 | 0.9860 |
+| member_1 | 0 [] | 14 | 0 | 0.9558 |
+| member_2 | 0 [] | 14 | 0 | 0.9558 |
+| member_3 | 0 [] | 2 | 0 | 0.9835 |
+| neutral_1 | 0 [] | 2 | 0 | 0.9835 |
+| neutral_2 | 0 [] | 2 | 0 | 0.9835 |
+| neutral_3 | 0 [] | 2 | 0 | 0.9835 |
+
+Inadmissible role encodings: 0 of 6 []
+
+## Slack region and neutral disagreement
+
+Any-pair slack (some member encoding covers, some insurer encoding denies): 54,754 cases
+Strict slack (member majority covers, insurer majority denies): 54,754 cases
+Neutral disagreement (the neutral encodings are not unanimous): 0 cases
+
+| Point | Any-pair slack | Strict slack | Neutral disagreement |
+|---|---|---|---|
+| F1/P3 male with female partner | 14,400 | 14,400 | 0 |
+| F4 male without female partner | 34,560 | 34,560 | 0 |
+| F2 age 40+, no test since 40 | 2,674 | 2,674 | 0 |
+| F5 tied latest FSH tests | 4,044 | 4,044 | 0 |
+| F6 partner sterilized, patient not | 0 | 0 | 0 |
+| F7 timed vs frequent across threshold | 17,164 | 17,164 | 0 |
+| (no recorded point) | 558 | 558 | 0 |
+
+Recovered points, any-pair: 5 of 6; strict: 5 of 6.
+
+Unattributed strict-slack cases: 558 in 42 feature groups (top 15 below)
+
+- ('intr', 'female', 'male', '35-39', 'no/other/no', '1mo_18'): 24
+- ('intr', 'female', 'male', '35-39', 'no/other/no', '1mo_16'): 24
+- ('intr', 'female', 'male', '35-39', 'no/other/no', '1mo_17'): 24
+- ('intr', 'female', 'male', '35-39', 'no/other/no', '6mo_exact_18'): 24
+- ('intr', 'female', 'male', '35-39', 'no/other/no', 'older19_recent18'): 24
+- ('intr', 'female', 'male', '35-39', 'no/other/no', 'old19_dec_recent18'): 24
+- ('ovul', 'female', 'male', '35-39', 'no/other/no', '1mo_18'): 24
+- ('ovul', 'female', 'male', '35-39', 'no/other/no', '1mo_16'): 24
+- ('ovul', 'female', 'male', '35-39', 'no/other/no', '1mo_17'): 24
+- ('ovul', 'female', 'male', '35-39', 'no/other/no', '6mo_exact_18'): 24
+- ('ovul', 'female', 'male', '35-39', 'no/other/no', 'older19_recent18'): 24
+- ('ovul', 'female', 'male', '35-39', 'no/other/no', 'old19_dec_recent18'): 24
+- ('intr', 'female', 'male', '<35', 'no/other/no', '1mo_18'): 12
+- ('intr', 'female', 'male', '<35', 'no/other/no', '1mo_16'): 12
+- ('intr', 'female', 'male', '<35', 'no/other/no', '1mo_17'): 12
+
+## Direction: share of cases covered, per point
+
+| Point | Expert port | Neutral (mean) | Member (mean) | Insurer (mean) |
+|---|---|---|---|---|
+| F1/P3 male with female partner | 0.039 | 0.019 | 0.038 | 0.019 |
+| F4 male without female partner | 0.000 | 0.000 | 0.089 | 0.000 |
+| F2 age 40+, no test since 40 | 0.000 | 0.023 | 0.023 | 0.000 |
+| F5 tied latest FSH tests | 0.011 | 0.038 | 0.057 | 0.033 |
+| F6 partner sterilized, patient not | 0.043 | 0.000 | 0.000 | 0.000 |
+| F7 timed vs frequent across threshold | 0.005 | 0.007 | 0.039 | 0.003 |

@@ -4,7 +4,7 @@ Pilot experiments behind a sharpened master's thesis exposé on LLM formalizatio
 using the CodeX Insurance Analyst (Stanford Cardinal Care, Comprehensive Infertility coverage) and the disagreements
 released with Vernie and Grabmair, "By Their Fruits You Will Know Them" (EMNLP 2026).
 
-Author: Mert Ayvazoglu (TUM). Experiments designed and run with AI assistance (Claude Code); all model outputs are kept.
+Author: Mert Ayvazoglu (TUM). All model outputs are kept.
 
 ## Tests, in order
 

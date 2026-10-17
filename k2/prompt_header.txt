@@ -1,0 +1,8 @@
+You are reviewing a hand-written logic-program encoding (Epilog syntax) of one benefit of a student health insurance policy. Below are (1) the policy text of the benefit, (2) the policy's glossary definition it relies on, and (3) the encoding.
+
+Task: list every point where the policy text does not fully settle the coverage outcome for some situation, so that an encoder had to choose a reading (including gaps, ambiguous wording, conflicts between the benefit text and the glossary, undefined terms, and edge cases the text does not address). For each point give:
+- the text element involved (quote briefly),
+- the competing readings,
+- which reading the encoding adopts (or that it does not address the point),
+- one example situation where the readings give different outcomes.
+Be exhaustive and specific. Do not list points the text settles clearly. Number the points.

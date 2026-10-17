@@ -1,0 +1,39 @@
+Case 1: COVERED | questions: none | wording unclear for this case: no | At 32 with a male partner she has 14 months (12 required) of unprotected timed intercourse, a documented cause (endometriosis), an unmedicated day 3 FSH of 16 within the past 12 months (below 19), no sterilization, and no effective less costly treatment, so IUI is covered when an infertility specialist provides it with the plan's advance approval.
+
+Case 2: NOT COVERED | questions: none | wording unclear for this case: no | At 33 with a male partner she needs 12 months of unprotected timed intercourse (the glossary also requires 1 year to count as infertile), and she has only 5 months.
+
+Case 3: NEED INFO | questions: 1. Have you had an unmedicated day 3 FSH test in the past 6 months, and was the most recent result below 19 mIU/mL? | wording unclear for this case: no | At 36 she meets the 6-month, documented-cause, no-sterilization and less-costly-treatment criteria, but the message gives no FSH test, and FSH is a separate requirement.
+
+Case 4: NOT COVERED | questions: none | wording unclear for this case: yes: it is unclear whether at-home self-insemination with donor sperm counts as a "cycle of donor insemination", but this does not change the outcome | A woman under 35 without a male partner needs at least 12 donor insemination cycles, and "a few times" falls well short of that.
+
+Case 5: NEED INFO | questions: 1. Has your physician documented a condition that causes your infertility, and what is it? (Infertility due to age-related ovarian insufficiency such as perimenopause is excluded.) 2. Have you had an unmedicated day 3 FSH test in the past 6 months? 3. Was every day 3 FSH test performed since you turned 40 below 19 mIU/mL? | wording unclear for this case: no | At 41 she meets the 6-month and no-sterilization criteria, but the message gives no documented cause and no FSH results, and at 40 or older every FSH test since age 40 must be below 19.
+
+Case 6: NEED INFO | questions: 1. Was the intercourse over those 13 months timed to your ovulation? | wording unclear for this case: yes: the eligibility table requires months of "unprotected timed sexual intercourse", while the glossary definition of infertility requires only "frequent, unprotected" intercourse | She meets every other criterion (34, 13 months, documented tubal factor, FSH 16 last month, no sterilization, no effective cheaper treatment), so the answer depends on whether "timed" is a strict requirement and whether her intercourse was timed.
+
+Case 7: NEED INFO | questions: 1. What was the operation, and was it a voluntary sterilization (for example tubal ligation, or a hysterectomy done as sterilization)? | wording unclear for this case: no | At 38 without a male partner she has 7 self-paid donor insemination cycles (6 required), a documented cause, and an FSH of 16 last month (below 19, under 40), so coverage turns on whether the earlier operation was a voluntary sterilization, which excludes coverage even if reversed.
+
+Case 8: COVERED | questions: none | wording unclear for this case: no | A male of any age with a female partner under 35 needs 12 months of trying and no FSH test; he has 13 months, a documented cause on his side, no sterilization, and no effective cheaper treatment.
+
+Case 9: NOT COVERED | questions: none | wording unclear for this case: yes: the glossary counts a male without a female partner as infertile after 2 abnormal semen analyses, but the eligibility table has no row for a male without a female partner, so it gives him no way to meet the "months trying to conceive" requirement, and the plan text does not address IUI performed on a surrogate who is not a covered student or partner | He meets the glossary definition of infertility, but the eligibility criteria as written cannot be satisfied by a single male, and the IUI would be performed on a surrogate who is not a covered member.
+
+Case 10: NOT COVERED | questions: none | wording unclear for this case: no | Her husband's vasectomy is a voluntary sterilization, and the plan excludes members whose partner has had one, with or without surgical reversal and regardless of post-reversal results.
+
+Case 11: NEED INFO | questions: 1. Has your doctor determined that a pregnancy cannot be achieved through a less costly treatment the plan covers (for example, oral ovulation-inducing medication)? | wording unclear for this case: no | At 37 she meets the 6-month, documented-cause, FSH (16 last month, under 40) and no-sterilization criteria, and ovulation induction with menotropins is a listed service, but the message does not say whether less costly covered treatment would work, and that is a separate criterion.
+
+Case 12: NOT COVERED | questions: none | wording unclear for this case: no | Her most recent unmedicated day 3 FSH is 21 mIU/mL, and the plan requires less than 19 for a woman under 35.
+
+Case 13: NEED INFO | questions: 1. How many months have you and your husband had unprotected intercourse timed to your ovulation? | wording unclear for this case: no | At 39 she needs at least 6 months of trying; she meets the cause, FSH (16 last month, under 40), no-sterilization and less-costly-treatment criteria, but "a while" does not establish the duration.
+
+Case 14: NEED INFO | questions: 1. Has your physician identified and documented a medical condition that causes your infertility? 2. Have you had an unmedicated day 3 FSH test in the past 12 months, and was the most recent result below 19 mIU/mL? | wording unclear for this case: no | Her 13 self-paid donor insemination cycles exceed the 12 required at 33, but the message gives no documented cause and no FSH result, and both are required.
+
+Case 15: NOT COVERED | questions: none | wording unclear for this case: no | She chose a tubal ligation as voluntary sterilization, and the plan excludes voluntary sterilization with or without surgical reversal, regardless of post-reversal results.
+
+Case 16: NOT COVERED | questions: none | wording unclear for this case: no | Her infertility is due to perimenopause, which the plan names as an excluded natural physiologic process.
+
+Case 17: COVERED | questions: none | wording unclear for this case: no | At exactly 35 she falls in the "35 years of age or older" row, which requires 6 months or more, and her 6 months of timed intercourse (read as unprotected, since she was trying to conceive), documented cause, FSH of 16 last month (below 19, under 40), no sterilization, and no effective cheaper treatment meet every criterion.
+
+Case 18: COVERED | questions: none | wording unclear for this case: no | At 28 with a female partner (no male partner) she has the required 12 self-paid donor insemination cycles, documented anovulation, an FSH of 16 last month (below 19, within 12 months), no sterilization, and no effective cheaper treatment.
+
+Case 19: NOT COVERED | questions: none | wording unclear for this case: no | At 37 she needs an unmedicated day 3 FSH test within the past 6 months, and her only test was 13 months ago (a new test below 19 would change this).
+
+Case 20: COVERED | questions: none | wording unclear for this case: no | A male of any age with a female partner 35 or older needs 6 months or more of trying and no FSH test; he has 7 months, a documented cause, no sterilization, and no effective cheaper treatment.

@@ -1,0 +1,5 @@
+encoding,crash,raised_on_cases,test_cases_correct,enumerated_accuracy,errors,wrongly_denied,wrongly_granted,recall_on_covered,top_error_groups
+mockA_0,,0,75/75,100.0%,0,0,0,100.0%,
+mockA_1,,0,75/75,99.7%,2912,2112,800,92.0%,"female+female, age 35 (past), fsh 1mo_18 [96]; female+female, age 35 (past), fsh 1mo_16 [96]; female+female, age 35 (past), fsh 1mo_17 [96]"
+mockB_0,,0,71/75,99.8%,1932,0,1932,100.0%,"female+female, age 40 (past), fsh older19_recent18 [144]; female+female, age 40 (today), fsh 1mo_18 [144]; female+female, age 40 (today), fsh 1mo_16 [144]"
+mockB_1,,0,53/75,99.5%,4312,2656,1656,90.0%,"female+female, age 35 (past), fsh 6mo_exact_18 [144]; female+female, age 35 (today), fsh 6mo_exact_18 [144]; female+female, age 36 (past), fsh 6mo_exact_18 [144]"

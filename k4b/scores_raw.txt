@@ -1,0 +1,135 @@
+
+===== answers_A1.txt: parsed 34
+C01 C  COVERED     flag=False | unclear:no
+C02 C  NOT COVERED flag=False | unclear:no
+C03 C  NOT COVERED flag=False | unclear:no
+C04 C  COVERED     flag=False | unclear:no
+C05 C  NOT COVERED flag=False | unclear:no
+C06 C  NOT COVERED flag=False | unclear:no
+C07 C  COVERED     flag=False | unclear:no
+C08 C  NOT COVERED flag=False | unclear:no
+C09 C  NOT COVERED flag=False | unclear:no
+C10 C  COVERED     flag=False | unclear:no
+M01 P1 exp NOT COVERED flag=False | q:none | unclear:no
+M02 P1 exp NOT COVERED flag=False | q:none | unclear:no
+M03 P1 fit NEED INFO   flag=True | q:1. Was your husband's vasectomy obtained as a form of voluntary steril | unclear:no
+M04 P1 fit NEED INFO   flag=True | q:1. Was your husband's vasectomy obtained as a form of voluntary steril | unclear:no
+M05 P2 exp NOT COVERED flag=True | q:none | unclear:yes: the table counts months of "timed" intercourse while the glossary definition of infertility requires only
+M06 P2 exp NOT COVERED flag=True | q:none | unclear:yes: the table counts months of "timed" intercourse, which you meet, while the glossary defines infertility on
+M07 P2 fit NEED INFO   flag=True | q:1. Was the timed unprotected intercourse also frequent (more than once | unclear:yes: the table requires "timed" intercourse while the glossary definition of infertility requires "frequent" i
+M08 P2 fit NEED INFO   flag=True | q:1. Was the unprotected intercourse timed to your ovulation? | unclear:yes: the table requires "timed" intercourse while the glossary only requires "frequent" intercourse
+M09 P3 exp COVERED     flag=False | q:none | unclear:no
+M10 P3 exp COVERED     flag=False | q:none | unclear:no
+M11 P3 fit COVERED     flag=False | q:none | unclear:no
+M12 P3 fit COVERED     flag=False | q:none | unclear:no
+M13 P4 exp NEED INFO   flag=True | q:none (the answer depends on plan interpretation, not on further facts  | unclear:yes: the glossary defines infertility for a male without a female partner, but the eligibility table has no ro
+M14 P4 exp NEED INFO   flag=True | q:1. How many months of unprotected timed intercourse with your husband  | unclear:yes: the plan text does not address IUI performed on a surrogate (eligibility and services are framed around "
+M15 P4 fit NEED INFO   flag=False | q:1. How many self-paid donor insemination cycles have you completed? 2. | unclear:yes: the plan text does not address IUI performed on a surrogate
+M16 P4 fit NEED INFO   flag=False | q:1. How many months of unprotected timed intercourse with your husband  | unclear:yes: the plan text does not address IUI performed on a surrogate
+M17 P5 exp NEED INFO   flag=True | q:none (the answer depends on plan interpretation, not on further facts  | unclear:yes: "less than 19 mIU/mL in all prior tests performed after age 40" does not say whether a test taken at 39 s
+M18 P5 exp NEED INFO   flag=True | q:1. Have you had any unmedicated day-3 FSH test since you turned 40, an | unclear:yes: "less than 19 mIU/mL in all prior tests performed after age 40" does not say whether a test taken at 39 s
+M19 P5 fit NEED INFO   flag=True | q:1. Was your June FSH test taken before or after your 40th birthday? 2. | unclear:yes: if the June test was taken at 39, the rule "less than 19 mIU/mL in all prior tests performed after age 40
+M20 P5 fit NEED INFO   flag=True | q:1. Have you had any unmedicated day-3 FSH test since you turned 40, an | unclear:yes: "less than 19 mIU/mL in all prior tests performed after age 40" does not say whether a test taken before 
+M21 P6 exp NEED INFO   flag=True | q:1. Has your husband been diagnosed with infertility (for example abnor | unclear:yes: the exclusion for infertility "due to a natural physiologic process" gives only female examples (ovarian 
+M22 P6 exp NEED INFO   flag=True | q:1. Has your husband been diagnosed with infertility (for example abnor | unclear:yes: the exclusion for infertility "due to a natural physiologic process" gives only female examples and does 
+M23 P6 fit NEED INFO   flag=True | q:1. Has a doctor diagnosed your husband with infertility, and if so, at | unclear:yes: the exclusion for infertility "due to a natural physiologic process" gives only female examples and does 
+M24 P6 fit NEED INFO   flag=True | q:1. Has your husband been diagnosed with infertility (for example abnor | unclear:yes: the exclusion for infertility "due to a natural physiologic process" gives only female examples and does 
+exposed {'silent': 4, 'flagged': 8}
+fitting {'flagged': 8, 'silent': 4}
+P1 {'silent': 2, 'flagged': 2}
+P2 {'flagged': 4}
+P3 {'silent': 4}
+P4 {'flagged': 2, 'silent': 2}
+P5 {'flagged': 4}
+P6 {'flagged': 4}
+control {'clean': 10}
+
+===== answers_A2.txt: parsed 34
+C01 C  COVERED     flag=False | unclear:no
+C02 C  NOT COVERED flag=False | unclear:no
+C03 C  NOT COVERED flag=False | unclear:no
+C04 C  COVERED     flag=False | unclear:no
+C05 C  NOT COVERED flag=False | unclear:no
+C06 C  NOT COVERED flag=False | unclear:no
+C07 C  COVERED     flag=False | unclear:no
+C08 C  NOT COVERED flag=False | unclear:no
+C09 C  NOT COVERED flag=False | unclear:no
+C10 C  COVERED     flag=False | unclear:no
+M01 P1 exp NOT COVERED flag=False | q:none | unclear:no
+M02 P1 exp NOT COVERED flag=False | q:none | unclear:no
+M03 P1 fit NEED INFO   flag=True | q:1. Was your husband's vasectomy obtained as a voluntary form of steril | unclear:no
+M04 P1 fit NEED INFO   flag=True | q:1. Was your husband's vasectomy obtained as a voluntary form of steril | unclear:no
+M05 P2 exp NOT COVERED flag=True | q:none | unclear:yes: the table counts months of "timed" intercourse while the glossary definition counts months of "frequent" 
+M06 P2 exp NOT COVERED flag=True | q:none | unclear:yes: the table counts months of "timed" intercourse, which you meet, while the glossary defines infertility by
+M07 P2 fit NEED INFO   flag=True | q:1. Over those 6 months, was the unprotected intercourse frequent (not  | unclear:yes: the table requires "timed" intercourse while the glossary definition of infertility requires "frequent" i
+M08 P2 fit NEED INFO   flag=True | q:1. Was the unprotected intercourse during those 14 months timed to you | unclear:yes: the glossary requires "frequent" intercourse while the eligibility table requires "timed" intercourse
+M09 P3 exp COVERED     flag=False | q:none | unclear:no
+M10 P3 exp COVERED     flag=False | q:none | unclear:no
+M11 P3 fit COVERED     flag=False | q:none | unclear:no
+M12 P3 fit COVERED     flag=False | q:none | unclear:no
+M13 P4 exp NOT COVERED flag=True | q:none | unclear:yes: the glossary defines a male without a female partner as infertile after 2 abnormal semen analyses, but th
+M14 P4 exp NOT COVERED flag=True | q:none | unclear:yes: the eligibility criteria and covered services are written for "you" or "your partner" and say nothing abo
+M15 P4 fit NOT COVERED flag=False | q:none | unclear:yes: the plan text does not address IUI performed on a surrogate
+M16 P4 fit NOT COVERED flag=False | q:none | unclear:yes: the plan text does not address IUI performed on a surrogate
+M17 P5 exp COVERED     flag=True | q:none | unclear:yes: for age 40 and older the FSH must be under 19 "in all prior tests performed after age 40," and the plan d
+M18 P5 exp COVERED     flag=True | q:none | unclear:yes: for age 40 and older the FSH must be under 19 "in all prior tests performed after age 40," and the plan d
+M19 P5 fit COVERED     flag=True | q:none | unclear:yes: for age 40 and older the FSH must be under 19 "in all prior tests performed after age 40," and the plan d
+M20 P5 fit COVERED     flag=True | q:none | unclear:yes: for age 40 and older the FSH must be under 19 "in all prior tests performed after age 40," and the plan d
+M21 P6 exp NOT COVERED flag=True | q:none | unclear:yes: the exclusion for infertility "due to a natural physiologic process such as age related ovarian insuffici
+M22 P6 exp NOT COVERED flag=True | q:none | unclear:yes: the natural-physiologic-process exclusion names only an ovarian example and does not say whether a male p
+M23 P6 fit NEED INFO   flag=True | q:1. Has a doctor attributed your husband's declining semen numbers to n | unclear:yes: the natural-physiologic-process exclusion gives only an ovarian example and does not say whether a male p
+M24 P6 fit NOT COVERED flag=True | q:none | unclear:yes: the natural-physiologic-process exclusion names only an ovarian example and does not say whether a male p
+exposed {'silent': 4, 'flagged': 8}
+fitting {'flagged': 8, 'silent': 4}
+P1 {'silent': 2, 'flagged': 2}
+P2 {'flagged': 4}
+P3 {'silent': 4}
+P4 {'flagged': 2, 'silent': 2}
+P5 {'flagged': 4}
+P6 {'flagged': 4}
+control {'clean': 10}
+
+===== answers_B1.txt: parsed 34
+C01 C  COVERED     flag=False | unclear:no
+C02 C  NOT COVERED flag=False | unclear:no
+C03 C  NOT COVERED flag=False | unclear:no
+C04 C  COVERED     flag=False | unclear:no
+C05 C  NOT COVERED flag=False | unclear:no
+C06 C  NOT COVERED flag=False | unclear:no
+C07 C  COVERED     flag=False | unclear:no
+C08 C  NOT COVERED flag=False | unclear:no
+C09 C  NOT COVERED flag=False | unclear:no
+C10 C  COVERED     flag=False | unclear:no
+M01 P1 exp NOT COVERED flag=True | q:none | unclear:yes: "You or your partner has not had a voluntary sterilization" (whether the partner's sterilization bars cov
+M02 P1 exp NOT COVERED flag=True | q:none | unclear:yes: "You or your partner has not had a voluntary sterilization" (whether the partner's sterilization bars cov
+M03 P1 fit NEED INFO   flag=True | q:1. Was your husband's vasectomy obtained as a form of voluntary steril | unclear:yes: "You or your partner has not had a voluntary sterilization" (whether the partner's sterilization bars cov
+M04 P1 fit NEED INFO   flag=True | q:1. Was your husband's vasectomy obtained as a form of voluntary steril | unclear:yes: "You or your partner has not had a voluntary sterilization" (whether the partner's sterilization bars cov
+M05 P2 exp NOT COVERED flag=True | q:none | unclear:yes: "timed" (eligibility table) versus "frequent" (glossary)
+M06 P2 exp NOT COVERED flag=True | q:none | unclear:yes: "timed" (eligibility table) versus "frequent" (glossary)
+M07 P2 fit NEED INFO   flag=True | q:1. Was the timed intercourse also frequent (more than once per cycle)? | unclear:yes: "timed" (eligibility table) versus "frequent" (glossary)
+M08 P2 fit NEED INFO   flag=True | q:1. Was the intercourse timed to your ovulation? | unclear:yes: "timed" (eligibility table) versus "frequent" (glossary)
+M09 P3 exp COVERED     flag=True | q:none | unclear:yes: the glossary defines infertility for a man only "without a female partner" (if its semen-analysis criteri
+M10 P3 exp COVERED     flag=True | q:none | unclear:yes: the glossary defines infertility for a man only "without a female partner" (if its 2-semen-analysis crite
+M11 P3 fit COVERED     flag=True | q:none | unclear:yes: the glossary defines infertility for a man only "without a female partner"
+M12 P3 fit COVERED     flag=True | q:none | unclear:yes: the glossary defines infertility for a man only "without a female partner"
+M13 P4 exp NOT COVERED flag=True | q:none | unclear:yes: the glossary defines a man without a female partner as infertile but the eligibility table has no row for
+M14 P4 exp NEED INFO   flag=False | q:1. How many months of frequent, unprotected intercourse timed to ovula | unclear:yes: the plan text is silent on IUI performed on a surrogate who is not a covered member
+M15 P4 fit NEED INFO   flag=False | q:1. How many self-paid donor insemination cycles have you completed wit | unclear:yes: the plan text is silent on IUI performed on a surrogate who is not a covered member
+M16 P4 fit NEED INFO   flag=False | q:1. How many months of frequent, unprotected intercourse timed to ovula | unclear:yes: the plan text is silent on IUI performed on a surrogate who is not a covered member
+M17 P5 exp NOT COVERED flag=True | q:none | unclear:yes: "all prior tests performed after age 40" when no test has been performed since her 40th birthday
+M18 P5 exp NOT COVERED flag=True | q:none | unclear:yes: "all prior tests performed after age 40" when no test has been performed since her 40th birthday
+M19 P5 fit NOT COVERED flag=True | q:none | unclear:yes: "all prior tests performed after age 40" when no test has been performed since her 40th birthday
+M20 P5 fit NOT COVERED flag=True | q:none | unclear:yes: "all prior tests performed after age 40" when no test has been performed since her 40th birthday
+M21 P6 exp NOT COVERED flag=True | q:none | unclear:yes: "You or your partner does not have infertility that is due to a natural physiologic process" (whether the
+M22 P6 exp NOT COVERED flag=True | q:none | unclear:yes: "You or your partner does not have infertility that is due to a natural physiologic process" (whether the
+M23 P6 fit NEED INFO   flag=True | q:1. Has your husband's doctor attributed his decline to a natural age-r | unclear:yes: "You or your partner does not have infertility that is due to a natural physiologic process" (whether the
+M24 P6 fit NOT COVERED flag=True | q:none | unclear:yes: "You or your partner does not have infertility that is due to a natural physiologic process" (whether the
+exposed {'flagged': 11, 'silent': 1}
+fitting {'flagged': 10, 'silent': 2}
+P1 {'flagged': 4}
+P2 {'flagged': 4}
+P3 {'flagged': 4}
+P4 {'flagged': 1, 'silent': 3}
+P5 {'flagged': 4}
+P6 {'flagged': 4}
+control {'clean': 10}

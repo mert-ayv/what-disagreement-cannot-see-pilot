@@ -1,0 +1,6 @@
+encoding,crash,raised_on_cases,test_cases_correct,enumerated_accuracy,errors,wrongly_denied,wrongly_granted,recall_on_covered,top_error_groups
+claude_0,,0,46/75,97.1%,26428,26428,0,0.0%,"female+female, age 35 (past), fsh 1mo_18 [144]; female+female, age 35 (past), fsh 1mo_16 [144]; female+female, age 35 (past), fsh 1mo_17 [144]"
+claude_1,,0,46/75,97.1%,26428,26428,0,0.0%,"female+female, age 35 (past), fsh 1mo_18 [144]; female+female, age 35 (past), fsh 1mo_16 [144]; female+female, age 35 (past), fsh 1mo_17 [144]"
+gemini_1,,0,46/75,97.1%,26428,26428,0,0.0%,"female+female, age 35 (past), fsh 1mo_18 [144]; female+female, age 35 (past), fsh 1mo_16 [144]; female+female, age 35 (past), fsh 1mo_17 [144]"
+openai_0,,0,46/75,97.1%,26428,26428,0,0.0%,"female+female, age 35 (past), fsh 1mo_18 [144]; female+female, age 35 (past), fsh 1mo_16 [144]; female+female, age 35 (past), fsh 1mo_17 [144]"
+openai_1,,0,46/75,97.1%,26428,26428,0,0.0%,"female+female, age 35 (past), fsh 1mo_18 [144]; female+female, age 35 (past), fsh 1mo_16 [144]; female+female, age 35 (past), fsh 1mo_17 [144]"

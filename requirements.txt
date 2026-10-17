@@ -1,0 +1,5 @@
+anthropic==1.13.0
+google-genai==2.29.0
+openai==3.28.0
+pypdf==6.20.0
+python-dotenv==1.2.4

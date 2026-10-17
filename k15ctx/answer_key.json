@@ -1,0 +1,130 @@
+[
+ {
+  "n": 21,
+  "provision": "107_tfeu",
+  "supports": "A",
+  "swap": true,
+  "correct_label": "2",
+  "n_quotes": 1
+ },
+ {
+  "n": 25,
+  "provision": "17_gdpr",
+  "supports": "A",
+  "swap": true,
+  "correct_label": "2",
+  "n_quotes": 1
+ },
+ {
+  "n": 32,
+  "provision": "17_gdpr",
+  "supports": "A",
+  "swap": false,
+  "correct_label": "1",
+  "n_quotes": 1
+ },
+ {
+  "n": 23,
+  "provision": "17_gdpr",
+  "supports": "A",
+  "swap": true,
+  "correct_label": "2",
+  "n_quotes": 1
+ },
+ {
+  "n": 35,
+  "provision": "22_gdpr",
+  "supports": "A",
+  "swap": false,
+  "correct_label": "1",
+  "n_quotes": 3
+ },
+ {
+  "n": 146,
+  "provision": "9_gdpr",
+  "supports": "A",
+  "swap": false,
+  "correct_label": "1",
+  "n_quotes": 1
+ },
+ {
+  "n": 130,
+  "provision": "6_gdpr",
+  "supports": "B",
+  "swap": false,
+  "correct_label": "2",
+  "n_quotes": 2
+ },
+ {
+  "n": 125,
+  "provision": "6_gdpr",
+  "supports": "A",
+  "swap": false,
+  "correct_label": "1",
+  "n_quotes": 1
+ },
+ {
+  "n": 51,
+  "provision": "3_uctd",
+  "supports": "A",
+  "swap": false,
+  "correct_label": "1",
+  "n_quotes": 3
+ },
+ {
+  "n": 59,
+  "provision": "3_uctd",
+  "supports": "A",
+  "swap": true,
+  "correct_label": "2",
+  "n_quotes": 1
+ },
+ {
+  "n": 53,
+  "provision": "3_uctd",
+  "supports": "B",
+  "swap": true,
+  "correct_label": "1",
+  "n_quotes": 2
+ },
+ {
+  "n": 74,
+  "provision": "57_proc-dir",
+  "supports": "A",
+  "swap": false,
+  "correct_label": "1",
+  "n_quotes": 2
+ },
+ {
+  "n": 87,
+  "provision": "57_proc-dir",
+  "supports": "B",
+  "swap": false,
+  "correct_label": "2",
+  "n_quotes": 2
+ },
+ {
+  "n": 94,
+  "provision": "5_ai-act",
+  "supports": "A",
+  "swap": false,
+  "correct_label": "1",
+  "n_quotes": 2
+ },
+ {
+  "n": 95,
+  "provision": "5_ai-act",
+  "supports": "A",
+  "swap": true,
+  "correct_label": "2",
+  "n_quotes": 2
+ },
+ {
+  "n": 103,
+  "provision": "5_ai-act",
+  "supports": "A",
+  "swap": false,
+  "correct_label": "1",
+  "n_quotes": 2
+ }
+]

@@ -1,0 +1,6 @@
+encoding,crash,raised_on_cases,test_cases_correct,enumerated_accuracy,errors,wrongly_denied,wrongly_granted,recall_on_covered,top_error_groups
+claude_0,,0,66/75,98.3%,15086,0,15086,100.0%,"female+female, age 35 (past), fsh tie_18_18 [144]; female+female, age 35 (today), fsh tie_18_18 [144]; female+female, age 36 (past), fsh tie_18_18 [144]"
+claude_1,,0,70/75,98.3%,15086,0,15086,100.0%,"female+female, age 35 (past), fsh tie_18_18 [144]; female+female, age 35 (today), fsh tie_18_18 [144]; female+female, age 36 (past), fsh tie_18_18 [144]"
+gemini_1,,0,61/75,97.5%,22966,0,22966,100.0%,"female+female, age 35 (past), fsh tie_18_18 [144]; female+female, age 35 (today), fsh tie_18_18 [144]; female+female, age 36 (past), fsh tie_18_18 [144]"
+openai_0,,0,70/75,98.3%,15086,0,15086,100.0%,"female+female, age 35 (past), fsh tie_18_18 [144]; female+female, age 35 (today), fsh tie_18_18 [144]; female+female, age 36 (past), fsh tie_18_18 [144]"
+openai_1,,0,70/75,98.3%,15086,0,15086,100.0%,"female+female, age 35 (past), fsh tie_18_18 [144]; female+female, age 35 (today), fsh tie_18_18 [144]; female+female, age 36 (past), fsh tie_18_18 [144]"

@@ -1,0 +1,2 @@
+encoding,crash,raised_on_cases,test_cases_correct,enumerated_accuracy,errors,wrongly_denied,wrongly_granted,recall_on_covered,top_error_groups
+mockU_0,,0,58/75,97.7%,20468,14376,6092,45.6%,"female+female, age 35 (past), fsh 6mo_plus1d_18 [96]; female+female, age 35 (past), fsh tie_18_18 [96]; female+female, age 35 (today), fsh 6mo_plus1d_18 [96]"

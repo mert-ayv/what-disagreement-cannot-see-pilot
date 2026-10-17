@@ -1,0 +1,23 @@
+c0_provision   answered 16/16  correct 16/16  mean confidence 80
+c1_recall      answered 16/16  correct 16/16  mean confidence 81
+c2_authority   answered 16/16  correct 16/16  mean confidence 83
+c3_placebo     answered 16/16  correct 16/16  mean confidence 81
+
+per case (1 = matches authority):
+case  c0  c1  c2  c3
+  21  1   1   1   1   (107_tfeu)
+  25  1   1   1   1   (17_gdpr)
+  32  1   1   1   1   (17_gdpr)
+  23  1   1   1   1   (17_gdpr)
+  35  1   1   1   1   (22_gdpr)
+ 146  1   1   1   1   (9_gdpr)
+ 130  1   1   1   1   (6_gdpr)
+ 125  1   1   1   1   (6_gdpr)
+  51  1   1   1   1   (3_uctd)
+  59  1   1   1   1   (3_uctd)
+  53  1   1   1   1   (3_uctd)
+  74  1   1   1   1   (57_proc-dir)
+  87  1   1   1   1   (57_proc-dir)
+  94  1   1   1   1   (5_ai-act)
+  95  1   1   1   1   (5_ai-act)
+ 103  1   1   1   1   (5_ai-act)

@@ -1,0 +1,45 @@
+
+===== answers_C1.txt: parsed 34
+C01 C  COVERED     flag=False | unclear:no
+C02 C  NOT COVERED flag=False | unclear:no
+C03 C  NOT COVERED flag=False | unclear:no
+C04 C  COVERED     flag=False | unclear:no
+C05 C  NOT COVERED flag=False | unclear:no
+C06 C  NOT COVERED flag=False | unclear:no
+C07 C  COVERED     flag=False | unclear:no
+C08 C  NOT COVERED flag=False | unclear:no
+C09 C  NOT COVERED flag=False | unclear:no
+C10 C  COVERED     flag=False | unclear:no
+M01 P1 exp NOT COVERED flag=True | q:none | unclear:yes: "You or your partner has not had a voluntary sterilization" could mean neither of you, or only one of you
+M02 P1 exp NOT COVERED flag=True | q:none | unclear:yes: "You or your partner has not had a voluntary sterilization" could mean neither of you, or only one of you
+M03 P1 fit NEED INFO   flag=True | q:1. Was your husband's vasectomy obtained as a form of voluntary steril | unclear:yes: "You or your partner has not had a voluntary sterilization" may mean neither partner may have had one
+M04 P1 fit NEED INFO   flag=True | q:1. Was your husband's vasectomy obtained as a form of voluntary steril | unclear:yes: "You or your partner has not had a voluntary sterilization" may mean neither partner may have had one
+M05 P2 exp NOT COVERED flag=True | q:none | unclear:yes: the table counts "unprotected timed sexual intercourse" while the glossary counts "frequent" intercourse,
+M06 P2 exp NOT COVERED flag=True | q:none | unclear:yes: the table requires "timed" intercourse and the glossary "frequent" intercourse, and the text neither says
+M07 P2 fit NEED INFO   flag=True | q:1. Was the unprotected intercourse during those 6 months frequent, not | unclear:yes: the table requires "timed" intercourse while the glossary requires "frequent" intercourse, and the text d
+M08 P2 fit NEED INFO   flag=True | q:1. Was the intercourse during those 14 months timed to your ovulation? | unclear:yes: the table requires "timed" intercourse while the glossary requires "frequent" intercourse, and the text d
+M09 P3 exp COVERED     flag=True | q:none | unclear:yes: the glossary gives no infertility pathway for a male with a female partner, and it is unclear whether nor
+M10 P3 exp COVERED     flag=True | q:none | unclear:yes: the glossary gives no infertility pathway for a male with a female partner (the 2-abnormal-semen-analysis
+M11 P3 fit COVERED     flag=True | q:none | unclear:yes: the glossary gives no infertility pathway for a male with a female partner, and the plan does not say who
+M12 P3 fit COVERED     flag=True | q:none | unclear:yes: the glossary defines infertility for a male only "without a female partner" (semen analyses) and gives no
+M13 P4 exp NOT COVERED flag=True | q:none | unclear:yes: the glossary recognizes infertility for "a male without a female partner" through 2 abnormal semen analys
+M14 P4 exp NEED INFO   flag=False | q:1. For how many months have you and your husband had unprotected, time | unclear:yes: the plan covers "intrauterine insemination" for "you" but does not say whether IUI performed on a surroga
+M15 P4 fit NEED INFO   flag=False | q:1. How many self-paid (not paid by this plan) donor insemination cycle | unclear:yes: the plan does not say whether IUI performed on a surrogate, who is not a covered member, is a covered inf
+M16 P4 fit NEED INFO   flag=False | q:1. For how many months have you and your husband had frequent, unprote | unclear:yes: the plan does not say whether IUI performed on a surrogate, who is not a covered member, is a covered inf
+M17 P5 exp COVERED     flag=True | q:none | unclear:yes: for age 40 and older the result "must be less than 19 mIU/mL in all prior tests performed after age 40", 
+M18 P5 exp COVERED     flag=True | q:none | unclear:yes: for age 40 and older the result "must be less than 19 mIU/mL in all prior tests performed after age 40", 
+M19 P5 fit COVERED     flag=True | q:none | unclear:yes: for age 40 and older the result "must be less than 19 mIU/mL in all prior tests performed after age 40", 
+M20 P5 fit COVERED     flag=True | q:none | unclear:yes: for age 40 and older the FSH result "must be less than 19 mIU/mL in all prior tests performed after age 4
+M21 P6 exp NOT COVERED flag=True | q:none | unclear:yes: "You or your partner does not have infertility that is due to a natural physiologic process" may bar cove
+M22 P6 exp NOT COVERED flag=True | q:none | unclear:yes: "You or your partner does not have infertility that is due to a natural physiologic process" may bar cove
+M23 P6 fit NEED INFO   flag=True | q:1. Has a doctor attributed your husband's changed results to natural a | unclear:yes: "You or your partner does not have infertility that is due to a natural physiologic process" may bar cove
+M24 P6 fit NOT COVERED flag=True | q:none | unclear:yes: "You or your partner does not have infertility that is due to a natural physiologic process" may bar cove
+exposed {'flagged': 11, 'silent': 1}
+fitting {'flagged': 10, 'silent': 2}
+P1 {'flagged': 4}
+P2 {'flagged': 4}
+P3 {'flagged': 4}
+P4 {'flagged': 1, 'silent': 3}
+P5 {'flagged': 4}
+P6 {'flagged': 4}
+control {'clean': 10}

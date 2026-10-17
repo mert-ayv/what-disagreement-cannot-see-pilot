@@ -1,0 +1,67 @@
+Case 1: NEED INFO | questions: 1. How many months of frequent, unprotected intercourse timed to ovulation have you had with your husband (or how many self-paid donor insemination cycles)? 2. Have you had an unmedicated day 3 FSH test in the past 12 months, and what was the result? | wording unclear for this case: yes: the plan text is silent on IUI performed on a surrogate who is not a covered member | The semen analyses do not count toward any criterion for a female with a male partner, so the 12-month trying requirement and the FSH test are still unestablished.
+
+Case 2: NEED INFO | questions: 1. Was the timed intercourse also frequent (more than once per cycle)? | wording unclear for this case: yes: "timed" (eligibility table) versus "frequent" (glossary) | She meets the 6 months of timed intercourse, the FSH test, the documented cause and the cost criterion, but the glossary definition of infertility requires frequent intercourse, which she has not stated.
+
+Case 3: NEED INFO | questions: 1. Was the intercourse timed to your ovulation? | wording unclear for this case: yes: "timed" (eligibility table) versus "frequent" (glossary) | She meets the glossary's 12 months of frequent intercourse and all other criteria, but the eligibility table requires timed intercourse, which she has not stated.
+
+Case 4: NOT COVERED | questions: none | wording unclear for this case: yes: "You or your partner has not had a voluntary sterilization" (whether the partner's sterilization bars coverage) | Her husband had a voluntary vasectomy, and the plan bars coverage after a sterilization "with or without surgical reversal, regardless of post reversal results", with vasectomy listed by name.
+
+Case 5: NOT COVERED | questions: none | wording unclear for this case: no | At 37 she needs an unmedicated day 3 FSH test within the past 6 months, and her only test was 13 months ago.
+
+Case 6: NEED INFO | questions: 1. How many self-paid donor insemination cycles have you completed without pregnancy? 2. Have you had an unmedicated day 3 FSH test in the past 12 months, and what was the result? | wording unclear for this case: yes: the plan text is silent on IUI performed on a surrogate who is not a covered member | A female under 35 without a male partner needs at least 12 donor insemination cycles and a qualifying FSH test, and neither is stated.
+
+Case 7: NOT COVERED | questions: none | wording unclear for this case: no | She chose a tubal ligation, which the plan lists as a voluntary sterilization that bars coverage.
+
+Case 8: NOT COVERED | questions: none | wording unclear for this case: yes: "all prior tests performed after age 40" when no test has been performed since her 40th birthday | At 40 the FSH criterion refers to tests performed after age 40, and her only test was done three months ago while she was 39.
+
+Case 9: NOT COVERED | questions: none | wording unclear for this case: yes: "timed" (eligibility table) versus "frequent" (glossary) | Her intercourse was frequent but never timed to ovulation, and the eligibility table requires 12 months of timed intercourse.
+
+Case 10: NOT COVERED | questions: none | wording unclear for this case: yes: "You or your partner does not have infertility that is due to a natural physiologic process" (whether the partner's age-related decline bars coverage, and whether his reduced fertility counts as infertility) | Her husband's reduced fertility is documented as a natural age-related decline, which the clause read as covering either partner excludes, although her own endometriosis would otherwise qualify.
+
+Case 11: COVERED | questions: none | wording unclear for this case: yes: the glossary defines infertility for a man only "without a female partner" | The eligibility table gives a male with a female partner under 35 a requirement of 12 months, which he meets, the FSH test does not apply to him, and the couple meets the glossary's definition through his wife's failure to conceive after 12 months of frequent intercourse.
+
+Case 12: NEED INFO | questions: 1. Was your husband's vasectomy obtained as a form of voluntary sterilization? | wording unclear for this case: yes: "You or your partner has not had a voluntary sterilization" (whether the partner's sterilization bars coverage) | Vasectomy bars coverage only "if obtained as a form of voluntary sterilization", regardless of the later reversal, and the message does not say why it was done.
+
+Case 13: NOT COVERED | questions: none | wording unclear for this case: no | Her doctor thinks a cheaper covered treatment could still work, and the plan requires that a pregnancy cannot be attained through less costly covered treatment.
+
+Case 14: COVERED | questions: none | wording unclear for this case: yes: the glossary defines infertility for a man only "without a female partner" (if its 2-semen-analysis criterion applied, his single abnormal analysis would not meet it) | The eligibility table requires 6 months for a male with a female partner aged 35 or older, he has 7, the FSH test does not apply, and the cause is documented.
+
+Case 15: COVERED | questions: none | wording unclear for this case: yes: the glossary defines infertility for a man only "without a female partner" (if its semen-analysis criterion applied, his two normal analyses would not meet it) | The eligibility table requires 12 months for a male with a female partner under 35, he has 13, the FSH test does not apply, and his doctor has documented a cause.
+
+Case 16: NOT COVERED | questions: none | wording unclear for this case: yes: the glossary defines a man without a female partner as infertile but the eligibility table has no row for him; the plan text is also silent on IUI performed on a surrogate | His two abnormal semen analyses meet the glossary definition, but the eligibility table sets no trying or FSH requirement he could meet, so eligibility cannot be established from the plan text.
+
+Case 17: NOT COVERED | questions: none | wording unclear for this case: yes: "You or your partner does not have infertility that is due to a natural physiologic process" (whether the partner's age-related decline bars coverage) | Her husband's decline is described as normal for his age, which the clause read as covering either partner excludes, although she otherwise meets every criterion.
+
+Case 18: COVERED | questions: none | wording unclear for this case: no | As a female under 35 without a male partner she has 13 self-paid donor insemination cycles (12 required), a qualifying FSH of 16 within 12 months, a documented cause, no sterilization and no cheaper option.
+
+Case 19: COVERED | questions: none | wording unclear for this case: no | As a female under 35 without a male partner she has completed the required 12 self-paid donor insemination cycles, with a qualifying FSH of 16, documented PCOS, no sterilization and no cheaper option.
+
+Case 20: NOT COVERED | questions: none | wording unclear for this case: yes: "all prior tests performed after age 40" when no test has been performed since her 40th birthday | Her only FSH test was in June, before she turned 40 in August, so no test meets the over-40 criterion.
+
+Case 21: COVERED | questions: none | wording unclear for this case: yes: the glossary defines infertility for a man only "without a female partner" | The eligibility table requires 12 months for a male with a female partner under 35, he has 13, the FSH test does not apply, and the cause on his side is documented.
+
+Case 22: NEED INFO | questions: 1. Has your husband's doctor attributed his decline to a natural age-related process? | wording unclear for this case: yes: "You or your partner does not have infertility that is due to a natural physiologic process" (whether the partner's age-related decline bars coverage) | She meets every criterion herself, and the answer turns on whether her husband's reduced numbers are due to natural aging.
+
+Case 23: COVERED | questions: none | wording unclear for this case: no | At 35 she has 6 months of frequent, timed intercourse, a qualifying FSH of 16 within 6 months, documented endometriosis, no sterilization and no cheaper option, and ovulation induction with menotropins is a listed service.
+
+Case 24: COVERED | questions: none | wording unclear for this case: no | At 32 she has 14 months of frequent, timed intercourse, a qualifying FSH of 16 within 12 months, documented endometriosis, no sterilization and no cheaper option.
+
+Case 25: NOT COVERED | questions: none | wording unclear for this case: no | Her most recent FSH result of 21 is not below the required 19 mIU/mL.
+
+Case 26: NOT COVERED | questions: none | wording unclear for this case: yes: "all prior tests performed after age 40" when no test has been performed since her 40th birthday | At 40 the FSH criterion refers to tests performed after age 40, and her only test was done at 39.
+
+Case 27: NOT COVERED | questions: none | wording unclear for this case: no | At 33 she needs 12 months of trying and has 5.
+
+Case 28: NEED INFO | questions: 1. How many months of frequent, unprotected intercourse timed to ovulation have you had with your husband (or how many self-paid donor insemination cycles)? 2. Have you had an unmedicated day 3 FSH test in the past 6 months, and what was the result? | wording unclear for this case: yes: the plan text is silent on IUI performed on a surrogate who is not a covered member | At 36 with a male partner she needs 6 months of trying and a qualifying FSH test within 6 months, and neither is stated.
+
+Case 29: NEED INFO | questions: 1. Was your husband's vasectomy obtained as a form of voluntary sterilization? | wording unclear for this case: yes: "You or your partner has not had a voluntary sterilization" (whether the partner's sterilization bars coverage) | She meets every other criterion, and a vasectomy bars coverage only if obtained as voluntary sterilization, regardless of the reversal.
+
+Case 30: NOT COVERED | questions: none | wording unclear for this case: yes: "You or your partner does not have infertility that is due to a natural physiologic process" (whether the partner's age-related decline bars coverage) | Her husband's sperm quality has declined naturally with age, which the clause read as covering either partner excludes, although she otherwise meets every criterion.
+
+Case 31: NOT COVERED | questions: none | wording unclear for this case: yes: "timed" (eligibility table) versus "frequent" (glossary) | Her intercourse was timed but only once per cycle, and the glossary defines infertility after frequent intercourse.
+
+Case 32: NOT COVERED | questions: none | wording unclear for this case: no | Her infertility is attributed to perimenopause, which the plan names as a natural physiologic process that bars coverage.
+
+Case 33: NOT COVERED | questions: none | wording unclear for this case: yes: "You or your partner has not had a voluntary sterilization" (whether the partner's sterilization bars coverage) | Her husband chose a vasectomy, and the plan bars coverage after a voluntary sterilization regardless of reversal.
+
+Case 34: NOT COVERED | questions: none | wording unclear for this case: yes: "all prior tests performed after age 40" when no test has been performed since her 40th birthday | At 40 the FSH criterion refers to tests performed after age 40, and her only test was done at 39.

@@ -1,4 +1,4 @@
-# Direction A one-day test: motivated disagreement (pre-registered 2026-10-18, before any encoding is written)
+# Direction A one-day test: motivated disagreement (pre-registered 2026-10-17, before any encoding is written)
 
 Idea: encodings written to serve the member and encodings written to serve
 the insurer, each bound to defensible readings, disagree on the points the text leaves open. The cases where they
@@ -12,8 +12,7 @@ diverge (the "slack region") should contain the recorded interpretive choices th
   no "most recent test" helper (it fixes the tie rule).
 - Roles: neutral, member's advocate, insurer's claims counsel. Role prompts ask for the reading most favourable to
   the side that a court could accept, with every departure from the plainest reading justified in a comment
-  quoting the text. Three encodings per role, each by a separate fresh Claude agent (9 in total). One model family:
-  the OpenAI key is invalid, so this is a Claude-only test, stated as a limit.
+  quoting the text. Three encodings per role, each by a separate fresh Claude agent (9 in total). One model family (Claude), stated as a limit.
 - Grid: the pilot's 907,200 boundary-value cases crossed with partner sterilization yes/no (1,814,400 cases);
   CodeX's 75 example claims with the new field set to "no".
 

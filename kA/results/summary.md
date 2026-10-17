@@ -30,11 +30,11 @@ Neutral disagreement (the neutral encodings are not unanimous): 3,132 cases
 | F4 male without female partner | 34,560 | 34,560 | 0 |
 | F2 age 40+, no test since 40 | 3,348 | 3,132 | 3,132 |
 | F5 tied latest FSH tests | 3,884 | 2,652 | 348 |
-| F6 partner sterilized, patient not | 22,920 | 17,928 | 648 |
+| F6 partner sterilized, patient not | 0 | 0 | 0 |
 | F7 timed vs frequent across threshold | 5,434 | 108 | 108 |
-| (no recorded point) | 558 | 0 | 0 |
+| (no recorded point) | 4,854 | 0 | 0 |
 
-Recovered points, any-pair: 6 of 6; strict: 5 of 6.
+Recovered points, any-pair: 5 of 6; strict: 4 of 6.
 
 Unattributed strict-slack cases: 0 in 0 feature groups (top 15 below)
 
@@ -47,5 +47,5 @@ Unattributed strict-slack cases: 0 in 0 feature groups (top 15 below)
 | F4 male without female partner | 0.000 | 0.133 | 0.133 | 0.000 |
 | F2 age 40+, no test since 40 | 0.000 | 0.009 | 0.028 | 0.000 |
 | F5 tied latest FSH tests | 0.011 | 0.053 | 0.057 | 0.031 |
-| F6 partner sterilized, patient not | 0.036 | 0.031 | 0.032 | 0.005 |
+| F6 partner sterilized, patient not | 0.043 | 0.000 | 0.000 | 0.000 |
 | F7 timed vs frequent across threshold | 0.005 | 0.003 | 0.011 | 0.003 |

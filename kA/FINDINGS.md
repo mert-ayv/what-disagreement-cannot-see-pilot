@@ -1,4 +1,4 @@
-# Direction A one-day test: findings (2026-10-18)
+# Direction A one-day test: findings (2026-10-17)
 
 Pre-registration: `PREREGISTRATION.md`. Encodings: `encodings/` (9 fresh Claude agents: 3 neutral, 3 member's advocate,
 3 insurer's counsel; prompts `prompt_*.txt`, not published because they contain the policy text). Evaluation:
@@ -52,3 +52,19 @@ the motivated encoder found an additional reading.
 ## Limits
 One model family (Claude) for all encoders; nine encodings; grid counts are not prevalence; point predicates and
 admissibility rule are the author's; F3 not representable; only one coverage.
+
+## Correction (2026-10-17, after review): F6 predicate
+The F6 predicate (partner sterilized, patient not) did not require a partner to exist, so cases of patients without a
+partner, where the field is void, were counted as F6. Fixed in `evaluate_A.py` and re-run (`results/summary.md`):
+- F6: 0 slack cases. All nine encodings, member's included, read "You or your partner has not had a voluntary
+  sterilization" as barring coverage when the partner is sterilized (0 of the partnered F6 cells covered by any
+  encoding); the expert port covers 4.3% of them because it checks the patient only. The encodings agree with each
+  other against the expert's omission.
+- Recovered points: strict 4 of 6 (F4, F2, F5, F7), any pair 5 of 6 (plus F1/P3). The pre-registered bar (4) is still
+  met; the earlier "5 of 6 strict" was wrong.
+- Neutral encodings: unanimous on F4 (the point with 34,560 of the 37,692 strict-slack cases); split 2 to 1 on F2;
+  small disagreement on F5 and F7.
+- Direction from this test is mixed: neutral encodings cover more than the expert on F4 and F5, mostly not on F2 (one
+  of three), and less on F1/P3. The cleaner direction evidence is the direct-answer run (`DIRECTION_NOTE.md`).
+- "No unattributed strict-slack cases" is close to true by construction: the grid varies mainly the features the six
+  predicates name. It is not evidence that no other open points exist (member_1's birthday reading is one).

@@ -1,4 +1,4 @@
-# Direction of resolution on silent points: existing evidence (2026-10-18)
+# Direction of resolution on silent points: existing evidence (2026-10-17)
 
 Source: pilot experiment 4 (`../results/FINDINGS.md`, direct answers, 10.10.2026; API runs, two model families,
 three runs each) and K4b (`../k4b/FINDINGS.md`).

@@ -56,7 +56,7 @@ def points_of(claim, meta):
         p.add(POINTS[2])
     if meta["fsh"] == "tie_18_18":
         p.add(POINTS[3])
-    if meta["partner_sterilized"] == "yes" and claim["patient_has_had_voluntary_sterilization"] == "no":
+    if meta["partner_sterilized"] == "yes" and partner != "no_partner" and claim["patient_has_had_voluntary_sterilization"] == "no":
         p.add(POINTS[4])
     if partner == "male" or (sex == "male" and partner == "female"):
         ref_age = meta["age"] if sex == "female" else meta["partner_age"]

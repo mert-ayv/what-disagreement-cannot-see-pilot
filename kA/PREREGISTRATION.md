@@ -33,11 +33,11 @@ diverge (the "slack region") should contain the recorded interpretive choices th
 - Direction: on each recorded point, the share of covered outcomes for the expert port, the neutral encodings,
   the member encodings and the insurer encodings.
 
-## Kill criteria (from the ideation, adapted)
+## Kill criteria
 - Instrument dead if more than a third of the role encodings (member or insurer) are inadmissible.
 - Content dead if the slack region is empty or touches none of the six representable points.
 - Pass (would justify one sentence and RQ3 wording in the note): region non-empty, at least 4 of the 6
-  representable points recovered (the ideation's 5 of 7 rescaled), fewer than 20 distinct new-point groups, and
+  representable points recovered, fewer than 20 distinct new-point groups, and
   member encodings cover more often than insurer encodings on every recovered point.
 - Comparison of interest: points in the slack region that neutral disagreement does not touch.
 

@@ -104,10 +104,12 @@ defines him as infertile, but the eligibility table has no row for him.
 | Member encodings, all families | 8 of 9 cover (counting the GPT member encodings that failed the check) |
 | Neutral encodings | Claude 3 of 3 cover; Gemini 0 of 3; GPT 0 of 3 |
 
-**Terms.** *Encoding*: a program that takes a claim and returns covered or not covered. *Reading*: one way of
-resolving a point the text leaves open. *Open point*: such a point; six were known in advance from the CodeX
-encoders' notes and earlier pilot runs. *Admissibility check*: an encoding must pass the CodeX test cases that do not
-depend on an open point, so a side cannot simply cover or deny everything.
+**Terms.**
+- *Encoding*: a program that takes a claim and returns covered or not covered.
+- *Reading*: one way of resolving a point the text leaves open.
+- *Open point*: such a point; six were known in advance from the CodeX encoders' notes and earlier pilot runs.
+- *Admissibility check*: an encoding must pass the CodeX test cases that do not depend on an open point, so a side
+  cannot simply cover or deny everything.
 
 Details, pre-registration and the GPT failure: `kA/FINDINGS.md`. Cross-family numbers: `kA/results/crossfamily.md`.
 

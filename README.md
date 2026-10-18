@@ -137,8 +137,8 @@ follow:
 >   count as genuinely open.
 
 > [!NOTE]
-> **RQ3: Which way do the expert encoding, different model families and a coverage agent resolve the points nothing
-> settles, and what should an answer tell the member?**
+> **RQ3: For the open points that no source settles, do the expert encoding, the model families and a coverage
+> agent decide in the member's or the insurer's favour, and what should the member be told?**
 > - Pilot so far: on silent points, direct model answers grant coverage where the expert encoding denies
 >   (`kA/DIRECTION_NOTE.md`); neutral encodings of different families resolve the same point differently
 >   (`kA/results/crossfamily.md`); a coverage agent decides reading-dependent questions without flagging them in 6 and
@@ -146,6 +146,11 @@ follow:
 > - Planned: on the genuinely open points from RQ2, compare the outcomes of the expert encoding, each model family and a
 >   coverage agent (who gets covered, who not), and test an answer of the form "covered under the member's reading, not
 >   under the insurer's; no source settles this" with the CodeX Insurance Analyst.
+> - Example answer for the man without a female partner: "Your claim is covered if the policy is read the way the
+>   glossary defines infertility for a man without a female partner (two abnormal semen analyses at least two weeks
+>   apart). It is not covered under the insurer's reading, because the eligibility table has no row for your
+>   situation. No court decision, official guidance or statement by the insurer settles this point. You can ask the
+>   insurer for a written decision on it."
 
 ## All tests in detail
 

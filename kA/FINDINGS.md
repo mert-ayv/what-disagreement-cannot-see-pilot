@@ -143,3 +143,13 @@ exposes 57.6% to 59.7% (Claude), 14.8% (Gemini) and 10.9% (GPT-6 Astra). The cas
 25,484 for all nine encodings and consist only of two choices of the expert port: 22,132 cases with a sterilized
 partner that it covers because it checks the patient only ("you or your partner"), and 3,352 cases with two equally
 recent FSH tests that it denies while every LLM encoding covers. No model error is in the hidden set. Grid caveats apply.
+
+## Correction (2026-10-18): F5 predicate and attribution (`attribution_check.py`, `results/attribution.md`)
+A mock check for kB showed that the F5 predicate (tied latest FSH tests) also tagged male patients, for whom FSH
+requirements do not apply. With F5 restricted to female patients, the recovered-point counts under kA's
+pre-registered rule do not change (Claude 4 of 6, Gemini 5 of 6), but the F5 counts shrink (Claude strict slack on
+F5: 348 cases instead of 2,652; Gemini: 780 instead of 4,044). Many strict-slack cases also fall on two recorded points
+at once. Counting only cases that involve a single recorded point, Claude recovers 2 of 6 points (F4, F2) and Gemini
+4 of 6 (F4, F2, F5, F7). Claude's F5 and F7 slack occurs only together with F2, so it may be driven by the age-40
+rule; Gemini's F1 slack always co-occurs with F7. The F5 rows of the cross-family comparison (`crossfamily.py`) use
+the uncorrected predicate as well. kB uses the corrected predicate and reports both attribution counts.

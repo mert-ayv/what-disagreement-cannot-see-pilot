@@ -81,11 +81,12 @@ flowchart LR
     M2 --> P
 ```
 
-| What was compared | Claude Opus 5.5 | Gemini 3.8 Flash | GPT-6.1 Sol and GPT-6 Astra |
-|---|---|---|---|
-| Member vs insurer: cases where they split | 37,692 | 54,754 | not measurable: every member encoding failed the admissibility check |
-| Known open points among the split cases | 4 of 6 | 5 of 6 | |
-| Neutral vs neutral within the family: cases where they split | 3,132 | 0 | 0 |
+| What was compared | Claude Opus 5.5 | Gemini 3.8 Flash | GPT-6.1 Sol and GPT-6 Astra | What it shows |
+|---|---|---|---|---|
+| Member vs insurer: cases where they split | 37,692 | 54,754 | not measurable: every member encoding failed the admissibility check | Opposing interests make the encodings decide differently on 2 to 3% of the cases; there the text leaves room |
+| Known open points among the split cases | 4 of 6 | 5 of 6 | | The splits fall on the known open points |
+| The same, counting only cases that involve a single open point | 2 of 6 | 4 of 6 | | Some split cases involve two points at once; counted strictly, Claude finds two points, Gemini four (`kA/results/attribution.md`) |
+| Neutral vs neutral within the family: cases where they split | 3,132 | 0 | 0 | Asking the same model again finds almost none of these points |
 
 Neutral encodings of different families split on 39,700 cases, on the same open points (descriptive, not
 pre-registered). So asking one model again shows almost none of the readings; asking for opposite sides, or asking
@@ -119,7 +120,7 @@ Details, pre-registration and the GPT failure: `kA/FINDINGS.md`. Cross-family nu
 | `c11check/` | Is the released `legal_ambiguity` label stable across recurrences? | Pairwise agreement 0.56 vs 0.51 by chance (small n, preliminary) |
 | `k15/`, `k15ctx/` | Do legal sources settle the released disagreements, and does supplying them change a model's reading? | Sources address 23 of 30 sampled points (mapping by an LLM agent, not a lawyer); a model picks the source's reading without seeing it (16 of 16) |
 | `k4/`, `k4b/` | Does a coverage agent ask for the right facts and notice when an answer depends on a reading? | Facts: yes. Readings: silent in 6 and 8 of 24 (pre-registered 30% bar missed in run 1); the encoders' own "we're assuming" gap silent in 8 of 8; with an automatic list of readings, 0 of 24 |
-| `kA/` | Do encodings written for the member and for the insurer reveal readings that neutral encodings share? | Claude: diverge on 37,692 of 1,814,400 grid cases, on 4 of 6 representable known points; Gemini 3.8 Flash replicates (54,754 cases, 5 of 6); GPT-6.1 Sol and GPT-6 Astra fail as pre-registered (every member encoding takes a reading of "you or your partner" that two CodeX tests reject; a first GPT run stopped at an enrollment field the interface lacks). Within a family neutral encodings barely disagree (Claude 3,132 cases, Gemini and GPT 0); across families they differ on 39,700 cases on the same points (descriptive, not pre-registered). Grid built around the known points |
+| `kA/` | Do encodings written for the member and for the insurer reveal readings that neutral encodings share? | Claude: diverge on 37,692 of 1,814,400 grid cases, on 4 of 6 representable known points (2 counting only cases that involve a single point); Gemini 3.8 Flash replicates (54,754 cases, 5 of 6; 4 counting single-point cases); GPT-6.1 Sol and GPT-6 Astra fail as pre-registered (every member encoding takes a reading of "you or your partner" that two CodeX tests reject; a first GPT run stopped at an enrollment field the interface lacks). Within a family neutral encodings barely disagree (Claude 3,132 cases, Gemini and GPT 0); across families they differ on 39,700 cases on the same points (descriptive, not pre-registered). Grid built around the known points |
 
 Folders `k2/`, `k4/`, `k4b/`, `k9/`, `k15ctx/` and `kA/` contain a `PREREGISTRATION.md` written before the runs it covers;
 results are in `FINDINGS.md`, `results/VERDICT.md` or `results/scoring.md`. The repository was created on 2026-10-17

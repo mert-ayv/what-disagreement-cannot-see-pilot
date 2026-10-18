@@ -153,3 +153,13 @@ at once. Counting only cases that involve a single recorded point, Claude recove
 4 of 6 (F4, F2, F5, F7). Claude's F5 and F7 slack occurs only together with F2, so it may be driven by the age-40
 rule; Gemini's F1 slack always co-occurs with F7. The F5 rows of the cross-family comparison (`crossfamily.py`) use
 the uncorrected predicate as well. kB uses the corrected predicate and reports both attribution counts.
+
+## Correction (2026-10-19): contradictory grid cases (`valid_cases_check.py`, `results/valid_cases.md`)
+The grid doubles every case into partner sterilization "yes" and "no", including patients without a partner, for
+whom "partner sterilized: yes" is contradictory input (259,200 of 1,814,400 cases). The findings are unchanged on the
+1,555,200 valid cases, but the counts shrink: member vs insurer strict slack Claude 19,764 (was 37,692), Gemini 36,970
+(was 54,754), with the same recovered points (4 and 5 of 6; 2 and 4 single-point); neutral disagreement within family
+Claude 2,484 (was 3,132), Gemini and GPT 0; across the three families 21,772 (was 39,700); neutral disagreement across
+families reveals 9.1% to 44.4% of each encoding's departures from the expert (within a family 0% to 5.6%); the hidden
+set is identical for all nine encodings, 24,788 cases (22,132 partner-sterilized cases the expert covers, 2,656
+tied-FSH cases it denies, no other). Earlier numbers in this file are kept as recorded.

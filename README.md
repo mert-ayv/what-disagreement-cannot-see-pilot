@@ -4,6 +4,30 @@ Based on the CodeX Insurance Analyst and Vernie and Grabmair, "By Their Fruits Y
 
 Author: Mert Ayvazoglu (TUM). All model outputs are kept.
 
+## Summary
+
+**Problem.** Current LLMs encode a coverage rule from its text without translation errors. What they still differ on
+are *readings*: points the text does not decide. Models settle them on their own, without telling the member, so a
+member may be denied (or granted) coverage on a point the policy never settles.
+
+**What the pilot shows** (pre-registered; one coverage of the CodeX Insurance Analyst; details below):
+- **A method to find open points.** Encode the rule once in the member's favour and once in the insurer's favour,
+  both bound by the CodeX test cases. Where their outcomes split, the text leaves room: 4 of 6 known open points for
+  Claude, 5 of 6 for Gemini (2 and 4 counting only cases with a single open point). For GPT the pre-registered test
+  failed: its member encodings take a reading the CodeX tests reject.
+- **An empirical finding about LLMs.** With a fixed input interface, repeated encodings by the same model resolve the
+  open points almost identically (0 to 2,484 disagreeing cases), while different model families resolve them
+  differently (21,772 cases). Which way a claim goes can depend on the model deployed.
+- **What disagreement cannot see.** Comparing neutral encodings across three families reveals 9 to 44% of each
+  encoding's departures from the expert encoding. What stays hidden is the same for all nine: the expert encoding's
+  own choices (the omitted "or your partner" clause and its rule for tied tests), no model error.
+- **Open, public tooling.** Pre-registrations, scripts, encodings and results for every test are in this repository.
+
+**What the thesis would add** (see the research questions below): a second domain and an unbiased case sample, a
+classification of each open point as settled by a source (text, test cases, case law, guidance, the insurer) or
+genuinely open, the direction in which deployed systems resolve the genuinely open ones, and an answer format that
+tells the member when an outcome depends on a reading.
+
 ## From the original exposé to the main experiment
 
 The original exposé (1 October 2026) assumed that LLMs make translation errors when they encode a coverage rule,
@@ -73,7 +97,7 @@ flowchart LR
     T --> C & G & O
     C & G & O --> A{"Passes the clear<br/>CodeX tests?"}
     A -- "no" --> X["excluded"]
-    A -- "yes" --> R["Decide 1.8 million<br/>boundary cases"]
+    A -- "yes" --> R["Decide 1.56 million<br/>boundary cases"]
     E["Expert encoding<br/>(CodeX)"] --> R
     R --> M1["Member vs insurer:<br/>where do they split?"]
     R --> M2["Neutral vs neutral:<br/>same family, other families"]
@@ -83,13 +107,13 @@ flowchart LR
 
 | What was compared | Claude Opus 5.5 | Gemini 3.8 Flash | GPT-6.1 Sol and GPT-6 Astra | What it shows |
 |---|---|---|---|---|
-| Member vs insurer: cases where they split | 37,692 | 54,754 | not measurable: every member encoding failed the admissibility check | On 2 to 3% of the cases, the member and insurer encodings reach opposite outcomes. These are the cases where the text is ambiguous or leaves room for interpretation: both outcomes can be argued from the text, and both encodings still pass the clear CodeX tests |
+| Member vs insurer: cases where they split | 19,764 | 36,970 | not measurable: every member encoding failed the admissibility check | On 1.3% (Claude) and 2.4% (Gemini) of the cases, the member and insurer encodings reach opposite outcomes. These are the cases where the text is ambiguous or leaves room for interpretation: both outcomes can be argued from the text, and both encodings still pass the clear CodeX tests |
 | Known open points among the split cases | 4 of 6 | 5 of 6 | | Of the 6 known open points, Claude decides 4 and Gemini 5 differently depending on whether the encoding favours the member or the insurer |
 | The same, counting only cases that involve a single open point | 2 of 6 | 4 of 6 | | Some split cases touch two open points at once; counting only cases with a single open point, Claude splits on 2 and Gemini on 4 of the 6 (`kA/results/attribution.md`) |
-| Neutral vs neutral within the family: cases where they split | 3,132 | 0 | 0 | Asking the same model again finds almost none of these points |
+| Neutral vs neutral within the family: cases where they split | 2,484 | 0 | 0 | Asking the same model again finds almost none of these points |
 
 **Two further observations:**
-1. **Model families differ.** Neutral encodings of different families split on 39,700 cases, on the same open points
+1. **Model families differ.** Neutral encodings of different families split on 21,772 cases, on the same open points
    (descriptive, not pre-registered).
 2. **Asking one model again is not enough.** Repeated neutral encodings by the same model show almost none of the
    readings; encodings for opposite sides, or by another model family, show them.
@@ -159,7 +183,7 @@ follow:
 | `c11check/` | Is the released `legal_ambiguity` label stable across recurrences? | Pairwise agreement 0.56 vs 0.51 by chance (small n, preliminary) |
 | `k15/`, `k15ctx/` | Do legal sources settle the released disagreements, and does supplying them change a model's reading? | Sources address 23 of 30 sampled points (mapping by an LLM agent, not a lawyer); a model picks the source's reading without seeing it (16 of 16) |
 | `k4/`, `k4b/` | Does a coverage agent ask for the right facts and notice when an answer depends on a reading? | Facts: yes. Readings: silent in 6 and 8 of 24 (pre-registered 30% bar missed in run 1); the encoders' own "we're assuming" gap silent in 8 of 8; with an automatic list of readings, 0 of 24 |
-| `kA/` | Do encodings written for the member and for the insurer reveal readings that neutral encodings share? | Claude: diverge on 37,692 of 1,814,400 grid cases, on 4 of 6 representable known points (2 counting only cases that involve a single point); Gemini 3.8 Flash replicates (54,754 cases, 5 of 6; 4 counting single-point cases); GPT-6.1 Sol and GPT-6 Astra fail as pre-registered (every member encoding takes a reading of "you or your partner" that two CodeX tests reject; a first GPT run stopped at an enrollment field the interface lacks). Within a family neutral encodings barely disagree (Claude 3,132 cases, Gemini and GPT 0); across families they differ on 39,700 cases on the same points (descriptive, not pre-registered). Grid built around the known points |
+| `kA/` | Do encodings written for the member and for the insurer reveal readings that neutral encodings share? | Claude: diverge on 19,764 of 1,555,200 valid grid cases, on 4 of 6 representable known points (2 counting only cases that involve a single point); Gemini 3.8 Flash replicates (36,970 cases, 5 of 6; 4 counting single-point cases); GPT-6.1 Sol and GPT-6 Astra fail as pre-registered (every member encoding takes a reading of "you or your partner" that two CodeX tests reject; a first GPT run stopped at an enrollment field the interface lacks). Within a family neutral encodings barely disagree (Claude 2,484 cases, Gemini and GPT 0); across families they differ on 21,772 cases on the same points (descriptive, not pre-registered). Grid built around the known points; counts on valid cases (`kA/results/valid_cases.md`) |
 
 Folders `k2/`, `k4/`, `k4b/`, `k9/`, `k15ctx/` and `kA/` contain a `PREREGISTRATION.md` written before the runs it covers;
 results are in `FINDINGS.md`, `results/VERDICT.md` or `results/scoring.md`. The repository was created on 2026-10-17

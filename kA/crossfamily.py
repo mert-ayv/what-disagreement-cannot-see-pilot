@@ -53,6 +53,27 @@ def main():
             return sum(sum(P[f][n][k] is True for k in idx) for n in ns) / (len(idx) * len(ns))
         cells = [f"{sh(f,'neutral'):.3f} / {sh(f,'member'):.3f} / {sh(f,'insurer'):.3f}" for f in fams]
         L.append(f"| {p} | {sum(ref[k] for k in idx) / len(idx):.3f} | " + " | ".join(cells) + " |")
+    # blind spot: which part of each neutral encoding's divergence from the expert port does disagreement expose?
+    neu = {f"{f}:{n}": [v is True for v in P[f][n]] for f in fams for n in role(f, "neutral")}
+    allneu = list(neu)
+    crossdis = [len({neu[n][k] for n in allneu}) > 1 for k in range(len(g))]
+    L += ["", "## What disagreement exposes of each neutral encoding's divergence from the expert port", "",
+          "| Encoding | Divergent cases | Exposed by disagreement within its family | Exposed across families |", "|---|---|---|---|"]
+    hidden = {}
+    for n in allneu:
+        fam = n.split(":")[0]
+        D = [k for k in range(len(g)) if neu[n][k] != bool(ref[k])]
+        within = sum(len({neu[m][k] for m in allneu if m.split(":")[0] == fam}) > 1 for k in D)
+        hidden[n] = frozenset(k for k in D if not crossdis[k])
+        L.append(f"| {n} | {len(D):,} | {within / len(D):.1%} | {sum(crossdis[k] for k in D) / len(D):.1%} |")
+    hs = set(hidden.values())
+    L += ["", f"Hidden set (divergent, but all nine neutral encodings agree): identical for all nine: {len(hs) == 1}."]
+    if len(hs) == 1:
+        H = next(iter(hs))
+        f6 = sum(1 for k in H if g[k][1]["partner_sterilized"] == "yes" and ref[k])
+        f5 = sum(1 for k in H if g[k][1]["fsh"] == "tie_18_18" and not ref[k])
+        L.append(f"Size {len(H):,}: {f6:,} partner-sterilized cases the expert port covers (it checks the patient only), "
+                 f"{f5:,} tied-FSH cases the expert port denies and every LLM encoding covers, {len(H) - f6 - f5:,} other.")
     L += ["", "GPT member encodings are inadmissible under the pre-registered floor (two CodeX sterilization examples); their",
           "shares are shown for description only."]
     (E.HERE / "results" / "crossfamily.md").write_text("\n".join(L) + "\n")

@@ -135,3 +135,11 @@ checks the patient only and every LLM encoding denies). With an unsterilized par
 the three families cover exactly the expert's 10,080 cells (0 differences). So F1/P3 shows no direction of its own.
 GPT-6 Astra's three insurer encodings deny all men with a female partner and pass the clear-test floor, so an
 insurer-side reading of F1/P3 exists and is admissible.
+
+## What disagreement cannot see (2026-10-18; descriptive, not pre-registered; `crossfamily.py`)
+For each neutral encoding, the cases where it diverges from the expert port, and how many of them disagreement exposes:
+comparing encodings within one family exposes 0% to 5%; comparing the nine neutral encodings of all three families
+exposes 57.6% to 59.7% (Claude), 14.8% (Gemini) and 10.9% (GPT-6 Astra). The cases that stay hidden are the same
+25,484 for all nine encodings and consist only of two choices of the expert port: 22,132 cases with a sterilized
+partner that it covers because it checks the patient only ("you or your partner"), and 3,352 cases with two equally
+recent FSH tests that it denies while every LLM encoding covers. No model error is in the hidden set. Grid caveats apply.

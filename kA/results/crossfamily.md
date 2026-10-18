@@ -36,5 +36,22 @@ Across the three families' neutral encodings: 39,700 cases.
 | F7 timed vs frequent across threshold | 0.005 | 0.003 / 0.009 / 0.003 | 0.007 / 0.039 / 0.003 | 0.003 / 0.009 / 0.003 |
 | D donor cycles meet the table, intercourse months do not (female with male partner) | 0.000 | 0.000 / 0.012 / 0.000 | 0.036 / 0.036 / 0.000 | 0.000 / 0.000 / 0.000 |
 
+## What disagreement exposes of each neutral encoding's divergence from the expert port
+
+| Encoding | Divergent cases | Exposed by disagreement within its family | Exposed across families |
+|---|---|---|---|
+| Claude:neutral_1 | 60,044 | 0.0% | 57.6% |
+| Claude:neutral_2 | 60,044 | 0.0% | 57.6% |
+| Claude:neutral_3 | 63,176 | 5.0% | 59.7% |
+| Gemini 3.8 Flash:neutral_1 | 29,928 | 0.0% | 14.8% |
+| Gemini 3.8 Flash:neutral_2 | 29,928 | 0.0% | 14.8% |
+| Gemini 3.8 Flash:neutral_3 | 29,928 | 0.0% | 14.8% |
+| GPT-6 Astra:neutral_1 | 28,616 | 0.0% | 10.9% |
+| GPT-6 Astra:neutral_2 | 28,616 | 0.0% | 10.9% |
+| GPT-6 Astra:neutral_3 | 28,616 | 0.0% | 10.9% |
+
+Hidden set (divergent, but all nine neutral encodings agree): identical for all nine: True.
+Size 25,484: 22,132 partner-sterilized cases the expert port covers (it checks the patient only), 3,352 tied-FSH cases the expert port denies and every LLM encoding covers, 0 other.
+
 GPT member encodings are inadmissible under the pre-registered floor (two CodeX sterilization examples); their
 shares are shown for description only.

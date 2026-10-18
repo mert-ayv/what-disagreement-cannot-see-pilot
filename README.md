@@ -66,7 +66,7 @@ flowchart LR
     M2 --> P
 ```
 
-| What was compared | Claude | Gemini 3.8 Flash | GPT-6.1 Sol and GPT-6 Astra |
+| What was compared | Claude Opus 5.5 | Gemini 3.8 Flash | GPT-6.1 Sol and GPT-6 Astra |
 |---|---|---|---|
 | Member vs insurer: cases where they split | 37,692 | 54,754 | not measurable: every member encoding failed the admissibility check |
 | Known open points among the split cases | 4 of 6 | 5 of 6 | |

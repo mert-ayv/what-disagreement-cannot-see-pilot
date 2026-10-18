@@ -84,8 +84,8 @@ flowchart LR
 | What was compared | Claude Opus 5.5 | Gemini 3.8 Flash | GPT-6.1 Sol and GPT-6 Astra | What it shows |
 |---|---|---|---|---|
 | Member vs insurer: cases where they split | 37,692 | 54,754 | not measurable: every member encoding failed the admissibility check | On 2 to 3% of the cases, the member and insurer encodings reach opposite outcomes. These are the cases where the text is ambiguous or leaves room for interpretation: both outcomes can be argued from the text, and both encodings still pass the clear CodeX tests |
-| Known open points among the split cases | 4 of 6 | 5 of 6 | | The splits fall on the known open points |
-| The same, counting only cases that involve a single open point | 2 of 6 | 4 of 6 | | Some split cases involve two points at once; counted strictly, Claude finds two points, Gemini four (`kA/results/attribution.md`) |
+| Known open points among the split cases | 4 of 6 | 5 of 6 | | Of the 6 known open points, Claude decides 4 and Gemini 5 differently depending on whether the encoding favours the member or the insurer |
+| The same, counting only cases that involve a single open point | 2 of 6 | 4 of 6 | | Some split cases touch two open points at once; counting only cases with a single open point, Claude splits on 2 and Gemini on 4 of the 6 (`kA/results/attribution.md`) |
 | Neutral vs neutral within the family: cases where they split | 3,132 | 0 | 0 | Asking the same model again finds almost none of these points |
 
 Neutral encodings of different families split on 39,700 cases, on the same open points (descriptive, not

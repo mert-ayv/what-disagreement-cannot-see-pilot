@@ -6,6 +6,19 @@ released with Vernie and Grabmair, "By Their Fruits You Will Know Them" (EMNLP 2
 
 Author: Mert Ayvazoglu (TUM). All model outputs are kept.
 
+## From the original exposé to the main experiment
+
+The original exposé (1 October 2026) assumed that LLMs make translation errors when they encode a coverage rule,
+and proposed a disagreement-driven loop to repair them. Two objections to it were tested first.
+
+| Step | Question | What was tested | What was found | What it meant |
+|---|---|---|---|---|
+| 1 | Do current models still make the errors the exposé wants to repair? | Kant et al.'s benchmark with current models; 14 guided encodings of the coverage (`PILOT_REPORT.md`) | 0.90 to 0.99 now vs 0.78 to 0.88 for the 2024 models; no threshold, age or partner errors | Translation is at ceiling; the repair loop has little left to repair |
+| 2 | Is a fixed input interface too strong an assumption? | Encodings where the models define their own input fields; a coverage agent that must ask for missing facts (`PILOT_REPORT.md`, `k4/`) | 54% of 185 self-defined fields matched the expert's, the rest mostly facts the expert assumes or readings, one matching error; the agent answered all 8 plain-fact cases correctly and asked for 9 of 12 missing facts | Getting facts into variables mostly works; again the residue is readings |
+| 3 | So what remains? | Where encodings and direct answers still differ from the expert encoding | Points the policy text does not decide, for example whether a man without a female partner can qualify | The object of study becomes the **readings**, not the errors |
+| 4 | Can a model at least list those readings? | One discovery prompt (`k2/`); a coverage agent answering member questions (`k4b/`) | The prompt lists 7 of 7 recorded choices; while answering, the agent decides reading-dependent questions without flagging them (6 and 8 of 24) | Listing is easy; noticing while deciding is not |
+| 5 | Does disagreement between encodings reveal the readings? | Neutral encodings of one model family, compared case by case (`kA/`) | Almost not: each family resolves the open points the same way every time | A different instrument is needed: **opposing interests**, and other model families. That is the main experiment below |
+
 ## The main experiment in one minute (`kA/`)
 
 Current models translate the coverage rule correctly. What they still differ on are **readings**: points where the

@@ -7,7 +7,7 @@ Author: Mert Ayvazoglu (TUM). All model outputs are kept.
 ## From the original exposé to the main experiment
 
 The original exposé (1 October 2026) assumed that LLMs make translation errors when they encode a coverage rule,
-and proposed a disagreement-driven loop to repair them. Three questions raised about it were tested first:
+and proposed a disagreement-driven loop to repair them. Three questions **raised in the interview** were tested first:
 
 | Question | What was tested | What was found | What it meant |
 |---|---|---|---|

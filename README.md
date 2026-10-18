@@ -125,7 +125,7 @@ these cases would comparing neutral model encodings fail to reveal?**
 - Planned: a second coverage and the EU provisions released with "By Their Fruits", a case sample not built around
   known points, and self-defined input interfaces (an experiment on this is running; results will be added here).
 
-**RQ2: Which of those points does the text, case law, official guidance or the insurer's recorded answer settle?**
+**RQ2: Which of these open points does the text, case law, official guidance or the insurer's recorded answer settle?**
 - Pilot so far: for 30 sampled "By Their Fruits" disagreements, legal sources address 23 (mapping by an LLM agent,
   checked against the primary texts, not yet by a lawyer; `k15/`). In `kA/`, two CodeX test cases settle the
   "you or your partner" point against GPT's member reading.

@@ -54,18 +54,21 @@ flowchart LR
         C1["3 neutral encodings<br/>(model decides itself)"]
         C2["3 encodings<br/>favouring the member"]
         C3["3 encodings<br/>favouring the insurer"]
+        C1 ~~~ C2 ~~~ C3
     end
     subgraph G["Gemini 3.8 Flash"]
         direction TB
         G1["3 neutral encodings<br/>(model decides itself)"]
         G2["3 encodings<br/>favouring the member"]
         G3["3 encodings<br/>favouring the insurer"]
+        G1 ~~~ G2 ~~~ G3
     end
     subgraph O["GPT-6.1 Sol and GPT-6 Astra"]
         direction TB
         O1["3 neutral encodings<br/>(model decides itself)"]
         O2["3 encodings<br/>favouring the member"]
         O3["3 encodings<br/>favouring the insurer"]
+        O1 ~~~ O2 ~~~ O3
     end
     T --> C & G & O
     C & G & O --> A{"Passes the clear<br/>CodeX tests?"}

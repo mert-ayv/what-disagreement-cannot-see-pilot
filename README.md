@@ -6,27 +6,14 @@ Author: Mert Ayvazoglu (TUM). All model outputs are kept.
 
 ## Summary
 
-**Problem.** Current LLMs encode a coverage rule from its text without translation errors. What they still differ on
-are *readings*: points the text does not decide. Models settle them on their own, without telling the member, so a
-member may be denied (or granted) coverage on a point the policy never settles.
-
-**What the pilot shows** (pre-registered; one coverage of the CodeX Insurance Analyst; details below):
-- **A method to find open points.** Encode the rule once in the member's favour and once in the insurer's favour,
-  both bound by the CodeX test cases. Where their outcomes split, the text leaves room: 4 of 6 known open points for
-  Claude, 5 of 6 for Gemini (2 and 4 counting only cases with a single open point). For GPT the pre-registered test
-  failed: its member encodings take a reading the CodeX tests reject.
-- **An empirical finding about LLMs.** With a fixed input interface, repeated encodings by the same model resolve the
-  open points almost identically (0 to 2,484 disagreeing cases), while different model families resolve them
-  differently (21,772 cases). Which way a claim goes can depend on the model deployed.
-- **What disagreement cannot see.** Comparing neutral encodings across three families reveals 9 to 44% of each
-  encoding's departures from the expert encoding. What stays hidden is the same for all nine: the expert encoding's
-  own choices (the omitted "or your partner" clause and its rule for tied tests), no model error.
-- **Open, public tooling.** Pre-registrations, scripts, encodings and results for every test are in this repository.
-
-**What the thesis would add** (see the research questions below): a second domain and an unbiased case sample, a
-classification of each open point as settled by a source (text, test cases, case law, guidance, the insurer) or
-genuinely open, the direction in which deployed systems resolve the genuinely open ones, and an answer format that
-tells the member when an outcome depends on a reading.
+- **Problem:** current LLMs encode a coverage rule correctly; what remains are *readings*, points the text does not
+  decide, which models settle on their own without telling the member.
+- **Method:** encode the rule for the member and for the insurer, both bound by the CodeX tests; where the outcomes
+  split, the text is open (4 of 6 known open points for Claude, 5 of 6 for Gemini; GPT failed as pre-registered).
+- **Finding:** one model resolves open points almost identically every time, but model families differ, so the
+  outcome can depend on the model deployed.
+- **Thesis:** classify each open point as settled by a source or genuinely open, and tell the member when an outcome
+  depends on a reading.
 
 ## From the original exposé to the main experiment
 

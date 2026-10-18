@@ -34,26 +34,38 @@ Current models translate the coverage rule correctly. What they still differ on 
 policy text does not decide the case. The experiment asks how to find those points, and how AI systems fill them.
 Every encoding is a program that decides claims; each interpretive choice in it is marked and justified from the text.
 
+Each model family wrote nine encodings of the same rule, from the same text and the same input interface. They differ
+only in one instruction:
+- **3 neutral**: "Encode the rule as a careful, neutral encoder would: where the text is unclear, choose the reading
+  you consider most plausible." The model decides for itself.
+- **3 favouring the member**: the model acts as the member's advocate and, wherever the text can reasonably be read in
+  more than one way, chooses the reading most favourable to the member that a court could still accept.
+- **3 favouring the insurer**: the same, as the insurer's claims counsel, choosing the reading most favourable to the
+  insurer.
+
+None may invent requirements or ignore clear ones, and every encoding must pass the clear CodeX test cases, so neither
+side can simply cover or deny everything.
+
 ```mermaid
 flowchart LR
     T["Policy text<br/>+ fixed input interface"]
     subgraph C["Claude Opus 5.5"]
         direction TB
-        C1["3 neutral encodings"]
-        C2["3 encodings for the member"]
-        C3["3 encodings for the insurer"]
+        C1["3 neutral encodings<br/>(model decides itself)"]
+        C2["3 encodings<br/>favouring the member"]
+        C3["3 encodings<br/>favouring the insurer"]
     end
     subgraph G["Gemini 3.8 Flash"]
         direction TB
-        G1["3 neutral encodings"]
-        G2["3 encodings for the member"]
-        G3["3 encodings for the insurer"]
+        G1["3 neutral encodings<br/>(model decides itself)"]
+        G2["3 encodings<br/>favouring the member"]
+        G3["3 encodings<br/>favouring the insurer"]
     end
     subgraph O["GPT-6.1 Sol and GPT-6 Astra"]
         direction TB
-        O1["3 neutral encodings"]
-        O2["3 encodings for the member"]
-        O3["3 encodings for the insurer"]
+        O1["3 neutral encodings<br/>(model decides itself)"]
+        O2["3 encodings<br/>favouring the member"]
+        O3["3 encodings<br/>favouring the insurer"]
     end
     T --> C & G & O
     C & G & O --> A{"Passes the clear<br/>CodeX tests?"}

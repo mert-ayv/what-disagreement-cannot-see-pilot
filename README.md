@@ -10,18 +10,37 @@ Author: Mert Ayvazoglu (TUM). All model outputs are kept.
 
 Current models translate the coverage rule correctly. What they still differ on are **readings**: points where the
 policy text does not decide the case. The experiment asks how to find those points, and how AI systems fill them.
+Every encoding is a program that decides claims; each interpretive choice in it is marked and justified from the text.
 
 ```mermaid
-flowchart TB
-    T["Policy text: Cardinal Care, Comprehensive Infertility<br/>plus one fixed input interface for every encoding"]
-    T --> F["Three model families: Claude, Gemini, GPT<br/>each writes 9 encodings: 3 neutral, 3 for the member, 3 for the insurer<br/>every interpretive choice marked and justified from the text"]
-    F --> A{"Admissibility check:<br/>passes the clear CodeX test cases?"}
+flowchart LR
+    T["Policy text<br/>+ fixed input interface"]
+    subgraph C["Claude"]
+        direction TB
+        C1["3 neutral"]
+        C2["3 for the member"]
+        C3["3 for the insurer"]
+    end
+    subgraph G["Gemini"]
+        direction TB
+        G1["3 neutral"]
+        G2["3 for the member"]
+        G3["3 for the insurer"]
+    end
+    subgraph O["GPT"]
+        direction TB
+        O1["3 neutral"]
+        O2["3 for the member"]
+        O3["3 for the insurer"]
+    end
+    T --> C & G & O
+    C & G & O --> A{"Passes the clear<br/>CodeX tests?"}
     A -- "no" --> X["excluded"]
-    A -- "yes" --> G["Every encoding decides 1,814,400 boundary cases:<br/>covered or not covered"]
-    E["Expert encoding: Python port of the CodeX encoding,<br/>passes all 75 CodeX tests"] --> G
-    G --> M1["Member vs insurer:<br/>where do the two sides split?"]
-    G --> M2["Neutral vs neutral:<br/>within one family, and across families"]
-    M1 --> P["Match the split cases to the known open points<br/>and see which side each system takes"]
+    A -- "yes" --> R["Decide 1.8 million<br/>boundary cases"]
+    E["Expert encoding<br/>(CodeX)"] --> R
+    R --> M1["Member vs insurer:<br/>where do they split?"]
+    R --> M2["Neutral vs neutral:<br/>same family, other families"]
+    M1 --> P["Which open points?<br/>Which side wins?"]
     M2 --> P
 ```
 

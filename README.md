@@ -150,18 +150,22 @@ follow:
 >
 > ```text
 > answer(claim):
->     covered_member  = encoding_for_member(claim)    # glossary: man without a female partner is infertile
->                                                      #   after 2 abnormal semen analyses -> covered
->     covered_insurer = encoding_for_insurer(claim)   # table has no row for him -> not covered
+>     # glossary: a man without a female partner is infertile
+>     # after 2 abnormal semen analyses -> covered
+>     covered_member  = encoding_for_member(claim)
+>     # the eligibility table has no row for him -> not covered
+>     covered_insurer = encoding_for_insurer(claim)
 >
 >     if covered_member == covered_insurer:
->         say covered_member                           # clear case: one answer
->     else if a source settles the point:              # text, test cases, court, guidance, insurer
+>         say covered_member              # clear case
+>     else if a source settles the point:
+>         # text, test cases, court, guidance, insurer
 >         say the source's outcome and name the source
->     else:                                            # genuinely open point
->         say "Covered under your reading, not under the insurer's.
->              No court decision, guidance or insurer statement settles this.
->              You can ask the insurer for a written decision."
+>     else:                               # genuinely open
+>         say "Covered under your reading, not under
+>              the insurer's. No court decision, guidance
+>              or insurer statement settles this. You can
+>              ask the insurer for a written decision."
 > ```
 
 ## All tests in detail

@@ -20,8 +20,10 @@ and proposed a disagreement-driven loop to repair them. Three questions **raised
    readings**: points the policy text does not decide, where models pick one interpretation without saying so. For
    example, can a man without a female partner qualify? The glossary defines him as infertile, but the eligibility
    table has no row for him.
-2. A model can list such points when asked: one discovery prompt finds 7 of 7 recorded choices (`k2/`). But while
-   deciding member questions, a coverage agent resolves them without flagging them (6 and 8 of 24, `k4b/`).
+2. A model can list such points when asked: one discovery prompt finds 7 of 7 recorded choices (`k2/`). While
+   deciding member questions, a coverage agent resolves them **silently**: it picks a reading without flagging it in
+   6 and 8 of 24 reading-dependent questions (two runs), and in 8 of 8 answers on the gap the CodeX encoders marked
+   "we're assuming" (`k4b/`).
 3. Comparing neutral encodings of one model family barely reveals them, because each family resolves the open points
    almost always the same way (`kA/`). A different instrument is needed: encodings written for **opposing interests**,
    and encodings by **other model families**. That is the main experiment.

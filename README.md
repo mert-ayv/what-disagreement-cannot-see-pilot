@@ -16,9 +16,10 @@ and proposed a disagreement-driven loop to repair them. Three questions **raised
 | 3 | Is a fixed input interface too strong an assumption? | Encodings where the models define their own input fields; a coverage agent that must ask for missing facts (`PILOT_REPORT.md`, `k4/`) | 54% of 185 self-defined fields matched the expert's; the main differences were facts the expert assumes and readings; one matching error; the agent answered all 8 plain-fact cases correctly and asked for 9 of 12 missing facts | Getting facts into variables mostly works; again the residue is readings |
 
 **What this led to.**
-1. Translation, memory and interface are not the problem. What remains are **readings**: points the policy text does
-   not decide, for example whether a man without a female partner can qualify (the glossary defines him as
-   infertile, the eligibility table has no row for him).
+1. We observed that translation, memory and the interface no longer cause errors. **What the data do show are
+   readings**: points the policy text does not decide, where models pick one interpretation without saying so. For
+   example, can a man without a female partner qualify? The glossary defines him as infertile, but the eligibility
+   table has no row for him.
 2. A model can list such points when asked: one discovery prompt finds 7 of 7 recorded choices (`k2/`). But while
    deciding member questions, a coverage agent resolves them without flagging them (6 and 8 of 24, `k4b/`).
 3. Comparing neutral encodings of one model family barely reveals them, because each family resolves the open points

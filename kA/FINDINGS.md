@@ -39,8 +39,8 @@ readings; encodings written for opposite sides do. Neutral disagreement touches 
 | F1/P3 man with a female partner | 0.039 | 0.019 | 0.023 | 0.019 |
 
 On the silent points (F4, F2, F5) the neutral LLM encodings sit on the member's side of the expert encoding, the same
-direction as the direct answers in pilot experiment 4 (`DIRECTION_NOTE.md`). F1/P3 is the exception: the expert's own
-assumption ("we're assuming ... a male with a female partner can be infertile") covers more than any LLM encoding.
+direction as the direct answers in pilot experiment 4 (`DIRECTION_NOTE.md`). F1/P3 looked like an exception (the
+expert port covers more), but see the correction of 2026-10-18 below: the excess is entirely F6 cells.
 
 ## The inadmissible encoding
 member_1 fails CodeX example `comprehensive_not_covered4d`: an FSH test of 19 taken on the 40th birthday. Its documented
@@ -127,3 +127,11 @@ Within one model, readings are nearly fixed, so disagreement among samples of on
 for opposing parties (two of three families) and encodings by different families both reveal the same points. Which
 way an open point is decided depends on the model deployed. For GPT, the opposing-role instrument fails as
 pre-registered because the member side takes a reading CodeX's own tests settle.
+
+## Correction (2026-10-18): F1/P3 direction
+Above, F1/P3 was described as the exception where the expert's assumption covers more than any LLM encoding. On the
+F1/P3 grid cells the expert port covers 20,160 cases; 10,080 of them have a sterilized partner (F6, where the expert
+checks the patient only and every LLM encoding denies). With an unsterilized partner, all nine neutral encodings of
+the three families cover exactly the expert's 10,080 cells (0 differences). So F1/P3 shows no direction of its own.
+GPT-6 Astra's three insurer encodings deny all men with a female partner and pass the clear-test floor, so an
+insurer-side reading of F1/P3 exists and is admissible.

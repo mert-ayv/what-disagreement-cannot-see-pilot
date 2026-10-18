@@ -1,0 +1,43 @@
+Below is a Python encoding that defines its own claim fields (SCHEMA), and a reference claim interface used by a
+test suite. Write a function
+
+    def adapt(ref_claim: dict) -> dict:
+
+that converts a claim in the reference interface into a claim in the encoding's SCHEMA, so the encoding can be run on
+the test suite. Map every SCHEMA field from the reference fields as faithfully as possible; derive a field if it can be
+derived from the reference fields. A reference field that is absent means the fact is unknown: leave the corresponding
+SCHEMA field out.
+
+Some SCHEMA fields may concern facts the reference interface does not cover at all (for example enrollment, provider
+qualifications or documentation). For each such field, set the value that means the requirement is met, and list the
+field names in a module-level list named ASSUMED_MET. Do not put fields that can be mapped or derived into ASSUMED_MET.
+
+Encoding:
+```python
+{encoding}
+```
+
+Reference interface:
+<interface>
+Each claim is a Python dict. Fields that are unknown are absent from the dict.
+
+service_type: str  -- "intrauterine_insemination", "ovulation_induction_cycle_with_menotropins", or another service name
+patient_dob: str, "YYYY_MM_DD"
+date_service_received: str, "YYYY_MM_DD"
+sex_of_patient_trying_to_conceive: "female" | "male"
+sex_of_patients_partner: "male" | "female" | "no_partner"
+age_of_patients_female_partner: int   (present when the partner is female)
+num_months_timed_unprotected_intercourse: int
+num_months_frequent_unprotected_heterosexual_intercourse: int
+num_cycles_donor_insemination: int   (self-paid or not paid for by the plan)
+patient_has_had_voluntary_sterilization: "yes" | "no"
+partner_has_had_voluntary_sterilization: "yes" | "no"
+demonstrated_and_documented_condition_causing_infertility: str  -- one of "natural_menopause", "natural_perimenopause", "natural_male_reproductive_aging", "other_natural_physiologic_process", "other"
+successful_pregnancy_can_be_attained_through_less_costly_treatment_covered_by_plan: "yes" | "no"
+day_3_fsh_tests: list of (level: int, date: "YYYY_MM_DD", time: "HH_MM"), unmedicated day 3 FSH tests (may contain several tests, possibly with the same date and time)
+abnormal_semen_analyses: list of dates "YYYY_MM_DD" of abnormal semen analyses (present for male patients when known)
+patient_or_partner_diagnosed_with_gender_dysphoria: "yes" | "no"
+</interface>
+
+Use only the Python standard library. Reply with a single ```python code block containing ASSUMED_MET and adapt, and
+nothing else.

@@ -137,7 +137,10 @@ follow:
 > these cases would comparing neutral model encodings fail to reveal?**
 > - Pilot so far: the main experiment above (`kA/`).
 > - Planned: a second coverage and the EU provisions released with "By Their Fruits", a case sample not built around
->   known points, and self-defined input interfaces (an experiment on this is running; results will be added here).
+>   known points, and self-defined input interfaces. A first test of the latter (`kB/`) failed as pre-registered in all three
+>   families: without a fixed interface, member and insurer encodings take readings the CodeX tests reject (a new
+>   one: whether "within the past 12 months" includes the boundary), and one model's neutral encodings disagree far
+>   more (e.g. Gemini 0 to 30,154 cases). The fixed interface hides part of the readings.
 
 > [!NOTE]
 > **RQ2: Which of these open points does the text, case law, official guidance or the insurer's recorded answer settle?**
@@ -173,8 +176,9 @@ follow:
 | `k15/`, `k15ctx/` | Do legal sources settle the released disagreements, and does supplying them change a model's reading? | Sources address 23 of 30 sampled points (mapping by an LLM agent, not a lawyer); a model picks the source's reading without seeing it (16 of 16) |
 | `k4/`, `k4b/` | Does a coverage agent ask for the right facts and notice when an answer depends on a reading? | Facts: yes. Readings: silent in 6 and 8 of 24 (pre-registered 30% bar missed in run 1); the encoders' own "we're assuming" gap silent in 8 of 8; with an automatic list of readings, 0 of 24 |
 | `kA/` | Do encodings written for the member and for the insurer reveal readings that neutral encodings share? | Claude: diverge on 19,764 of 1,555,200 valid grid cases, on 4 of 6 representable known points (2 counting only cases that involve a single point); Gemini 3.8 Flash replicates (36,970 cases, 5 of 6; 4 counting single-point cases); GPT-6.1 Sol and GPT-6 Astra fail as pre-registered (every member encoding takes a reading of "you or your partner" that two CodeX tests reject; a first GPT run stopped at an enrollment field the interface lacks). Within a family neutral encodings barely disagree (Claude 2,484 cases, Gemini and GPT 0); across families they differ on 21,772 cases on the same points (descriptive, not pre-registered). Grid built around the known points; counts on valid cases (`kA/results/valid_cases.md`) |
+| `kB/` | Does the role test still work when each model defines its own input fields? | No, as pre-registered: too many member and insurer encodings fail the CodeX tests in all three families (Claude 4 of 6, Gemini and GPT 3 of 6), because without the kA helper functions they take readings the tests settle (FSH window boundary, birthday, "you or your partner"). Direction holds; neutral disagreement within a family rises sharply (Claude 2,484 to 19,888, GPT 0 to 17,280, Gemini 0 to 30,154 valid cases) |
 
-Folders `k2/`, `k4/`, `k4b/`, `k9/`, `k15ctx/` and `kA/` contain a `PREREGISTRATION.md` written before the runs it covers;
+Folders `k2/`, `k4/`, `k4b/`, `k9/`, `k15ctx/`, `kA/` and `kB/` contain a `PREREGISTRATION.md` written before the runs it covers;
 results are in `FINDINGS.md`, `results/VERDICT.md` or `results/scoring.md`. The repository was created on 2026-10-17
 after the runs, so the git history does not timestamp the pre-registrations; the dates in the files do.
 Corrections made after red-team reviews are recorded in the findings files themselves.

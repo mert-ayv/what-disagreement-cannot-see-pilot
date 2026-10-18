@@ -118,11 +118,31 @@ Translation of the coverage is at ceiling; what remains are readings: points the
 one model family they are nearly fixed, so sampling one model again shows few of them; different families settle some
 of them differently. Encodings written for the member and for the insurer, or by other model families, reveal them. Three questions
 follow:
-1. Where does an encoded rule allow both a member-favourable and an insurer-favourable outcome, and how many of
-   these cases would comparing neutral model encodings fail to reveal?
-2. Which of those points does the text, case law, official guidance or the insurer's recorded answer settle?
-3. Which way do the expert encoding, different model families and a coverage agent resolve the points nothing settles, and
-   what should an answer tell the member?
+
+**RQ1: Where does an encoded rule allow both a member-favourable and an insurer-favourable outcome, and how many of
+these cases would comparing neutral model encodings fail to reveal?**
+- Pilot so far: the main experiment above (`kA/`).
+- Planned: a second coverage and the EU provisions released with "By Their Fruits", a case sample not built around
+  known points, and self-defined input interfaces (an experiment on this is running; results will be added here).
+
+**RQ2: Which of those points does the text, case law, official guidance or the insurer's recorded answer settle?**
+- Pilot so far: for 30 sampled "By Their Fruits" disagreements, legal sources address 23 (mapping by an LLM agent,
+  checked against the primary texts, not yet by a lawyer; `k15/`). In `kA/`, two CodeX test cases settle the
+  "you or your partner" point against GPT's member reading.
+- Planned: for each point found under RQ1, check the sources in a fixed order (the text itself, the encoders' test
+  cases and notes, case law, official guidance, the insurer's recorded answer); an LLM agent cites them, every
+  citation is checked against the primary text, and a law-trained reader reviews a sample. Points no source settles
+  count as genuinely open.
+
+**RQ3: Which way do the expert encoding, different model families and a coverage agent resolve the points nothing
+settles, and what should an answer tell the member?**
+- Pilot so far: on silent points, direct model answers grant coverage where the expert encoding denies
+  (`kA/DIRECTION_NOTE.md`); neutral encodings of different families resolve the same point differently
+  (`kA/results/crossfamily.md`); a coverage agent decides reading-dependent questions without flagging them in 6 and
+  8 of 24, and in 0 of 24 when given an automatic list of readings (`k4b/`).
+- Planned: on the genuinely open points from RQ2, compare the outcomes of the expert encoding, each model family and a
+  coverage agent (who gets covered, who not), and test an answer of the form "covered under the member's reading, not
+  under the insurer's; no source settles this" with the CodeX Insurance Analyst.
 
 ## All tests in detail
 

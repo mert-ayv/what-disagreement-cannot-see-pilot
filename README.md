@@ -88,9 +88,11 @@ flowchart LR
 | The same, counting only cases that involve a single open point | 2 of 6 | 4 of 6 | | Some split cases touch two open points at once; counting only cases with a single open point, Claude splits on 2 and Gemini on 4 of the 6 (`kA/results/attribution.md`) |
 | Neutral vs neutral within the family: cases where they split | 3,132 | 0 | 0 | Asking the same model again finds almost none of these points |
 
-Neutral encodings of different families split on 39,700 cases, on the same open points (descriptive, not
-pre-registered). So asking one model again shows almost none of the readings; asking for opposite sides, or asking
-another model family, shows them.
+**Two further observations:**
+1. **Model families differ.** Neutral encodings of different families split on 39,700 cases, on the same open points
+   (descriptive, not pre-registered).
+2. **Asking one model again is not enough.** Repeated neutral encodings by the same model show almost none of the
+   readings; encodings for opposite sides, or by another model family, show them.
 
 **One case.** A 34-year-old man without a partner, with two abnormal semen analyses two weeks apart. The glossary
 defines him as infertile, but the eligibility table has no row for him.

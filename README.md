@@ -116,11 +116,12 @@ Details, pre-registration and the GPT failure: `kA/FINDINGS.md`. Cross-family nu
 ## Research questions for the thesis
 Translation of the coverage is at ceiling; what remains are readings: points the policy text does not settle. Within
 one model family they are nearly fixed, so sampling one model again shows few of them; different families settle some
-of them differently. Encodings written for opposite sides, or by other model families, reveal them. Three questions
+of them differently. Encodings written for the member and for the insurer, or by other model families, reveal them. Three questions
 follow:
-1. Where does an encoded rule leave room for the parties? Encoded for each side under an admissibility floor (the
-   clear CodeX test cases, departures justified from the text), where do the encodings diverge on a grid of
-   boundary cases, which side does each reading favour, and how much does disagreement within one model, or across
+1. Where does an encoded rule leave room for the insured member and the insurer to reach different outcomes? When
+   the rule is encoded once in the member's favour and once in the insurer's favour (each encoding must still pass the
+   clear CodeX test cases and justify every reading from the text), on which boundary cases do the outcomes differ,
+   which side does each reading favour, and how much of this does disagreement within one model, or across model
    families, miss?
 2. Which of those points does the text, case law, official guidance or the insurer's recorded answer settle?
 3. Which way do the expert encoding, different model families and a coverage agent resolve the points nothing settles, and

@@ -6,8 +6,8 @@ Author: Mert Ayvazoglu (TUM). All model outputs are kept.
 
 ## Summary
 
-- **Problem:** current LLMs encode a coverage rule correctly; what remains are *readings*, points the text does not
-  decide, which models settle on their own without telling the member.
+- **Problem:** current LLMs encode a coverage rule correctly, but some points in the text do not make clear whether a
+  claim is covered or not. Models settle these *readings* on their own, without telling the member.
 - **Method:** encode the rule for the member and for the insurer, both bound by the CodeX tests; where the outcomes
   split, the text is open (4 of 6 known open points for Claude, 5 of 6 for Gemini; GPT failed as pre-registered).
 - **Finding:** one model resolves open points almost identically every time, but model families differ, so the

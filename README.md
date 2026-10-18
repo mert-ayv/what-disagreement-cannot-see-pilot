@@ -6,6 +6,52 @@ released with Vernie and Grabmair, "By Their Fruits You Will Know Them" (EMNLP 2
 
 Author: Mert Ayvazoglu (TUM). All model outputs are kept.
 
+## The main experiment in one minute (`kA/`)
+
+Current models translate the coverage rule correctly. What they still differ on are **readings**: points where the
+policy text does not decide the case. The experiment asks how to find those points, and how AI systems fill them.
+
+```mermaid
+flowchart TB
+    T["Policy text: Cardinal Care, Comprehensive Infertility<br/>plus one fixed input interface for every encoding"]
+    T --> F["Three model families: Claude, Gemini, GPT<br/>each writes 9 encodings: 3 neutral, 3 for the member, 3 for the insurer<br/>every interpretive choice marked and justified from the text"]
+    F --> A{"Admissibility check:<br/>passes the clear CodeX test cases?"}
+    A -- "no" --> X["excluded"]
+    A -- "yes" --> G["Every encoding decides 1,814,400 boundary cases:<br/>covered or not covered"]
+    E["Expert encoding: Python port of the CodeX encoding,<br/>passes all 75 CodeX tests"] --> G
+    G --> M1["Member vs insurer:<br/>where do the two sides split?"]
+    G --> M2["Neutral vs neutral:<br/>within one family, and across families"]
+    M1 --> P["Match the split cases to the known open points<br/>and see which side each system takes"]
+    M2 --> P
+```
+
+| What was compared | Claude | Gemini 3.8 Flash | GPT-6.1 Sol and GPT-6 Astra |
+|---|---|---|---|
+| Member vs insurer: cases where they split | 37,692 | 54,754 | not measurable: every member encoding failed the admissibility check |
+| Known open points among the split cases | 4 of 6 | 5 of 6 | |
+| Neutral vs neutral within the family: cases where they split | 3,132 | 0 | 0 |
+
+Neutral encodings of different families split on 39,700 cases, on the same open points (descriptive, not
+pre-registered). So asking one model again shows almost none of the readings; asking for opposite sides, or asking
+another model family, shows them.
+
+**One case.** A 34-year-old man without a partner, with two abnormal semen analyses two weeks apart. The glossary
+defines him as infertile, but the eligibility table has no row for him.
+
+| Who decides | Outcome |
+|---|---|
+| Expert encoding (CodeX) | not covered |
+| Insurer encodings, all families | 0 of 9 cover |
+| Member encodings, all families | 8 of 9 cover (counting the GPT member encodings that failed the check) |
+| Neutral encodings | Claude 3 of 3 cover; Gemini 0 of 3; GPT 0 of 3 |
+
+**Terms.** *Encoding*: a program that takes a claim and returns covered or not covered. *Reading*: one way of
+resolving a point the text leaves open. *Open point*: such a point; six were known in advance from the CodeX
+encoders' notes and earlier pilot runs. *Admissibility check*: an encoding must pass the CodeX test cases that do not
+depend on an open point, so a side cannot simply cover or deny everything.
+
+Details, pre-registration and the GPT failure: `kA/FINDINGS.md`. Cross-family numbers: `kA/results/crossfamily.md`.
+
 ## Tests, in order
 
 | Folder | Question | Result |

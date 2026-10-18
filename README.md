@@ -1,8 +1,6 @@
 # What Disagreement Cannot See: pilot tests (October 2026)
 
-Pilot experiments behind a sharpened master's thesis exposé on LLM formalizations of insurance coverage rules,
-using the CodeX Insurance Analyst (Stanford Cardinal Care, Comprehensive Infertility coverage) and the disagreements
-released with Vernie and Grabmair, "By Their Fruits You Will Know Them" (EMNLP 2026).
+Based on the CodeX Insurance Analyst and Vernie and Grabmair, "By Their Fruits You Will Know Them" (EMNLP 2026).
 
 Author: Mert Ayvazoglu (TUM). All model outputs are kept.
 

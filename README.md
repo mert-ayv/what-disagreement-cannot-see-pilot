@@ -146,11 +146,23 @@ follow:
 > - Planned: on the genuinely open points from RQ2, compare the outcomes of the expert encoding, each model family and a
 >   coverage agent (who gets covered, who not), and test an answer of the form "covered under the member's reading, not
 >   under the insurer's; no source settles this" with the CodeX Insurance Analyst.
-> - Example answer for the man without a female partner: "Your claim is covered if the policy is read the way the
->   glossary defines infertility for a man without a female partner (two abnormal semen analyses at least two weeks
->   apart). It is not covered under the insurer's reading, because the eligibility table has no row for your
->   situation. No court decision, official guidance or statement by the insurer settles this point. You can ask the
->   insurer for a written decision on it."
+> - Example of such an answer, for the man without a female partner:
+>
+> ```text
+> answer(claim):
+>     covered_member  = encoding_for_member(claim)    # glossary: man without a female partner is infertile
+>                                                      #   after 2 abnormal semen analyses -> covered
+>     covered_insurer = encoding_for_insurer(claim)   # table has no row for him -> not covered
+>
+>     if covered_member == covered_insurer:
+>         say covered_member                           # clear case: one answer
+>     else if a source settles the point:              # text, test cases, court, guidance, insurer
+>         say the source's outcome and name the source
+>     else:                                            # genuinely open point
+>         say "Covered under your reading, not under the insurer's.
+>              No court decision, guidance or insurer statement settles this.
+>              You can ask the insurer for a written decision."
+> ```
 
 ## All tests in detail
 

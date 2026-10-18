@@ -37,23 +37,23 @@ Every encoding is a program that decides claims; each interpretive choice in it 
 ```mermaid
 flowchart LR
     T["Policy text<br/>+ fixed input interface"]
-    subgraph C["Claude"]
+    subgraph C["Claude Opus 5.5"]
         direction TB
-        C1["3 neutral"]
-        C2["3 for the member"]
-        C3["3 for the insurer"]
+        C1["3 neutral encodings"]
+        C2["3 encodings for the member"]
+        C3["3 encodings for the insurer"]
     end
-    subgraph G["Gemini"]
+    subgraph G["Gemini 3.8 Flash"]
         direction TB
-        G1["3 neutral"]
-        G2["3 for the member"]
-        G3["3 for the insurer"]
+        G1["3 neutral encodings"]
+        G2["3 encodings for the member"]
+        G3["3 encodings for the insurer"]
     end
-    subgraph O["GPT"]
+    subgraph O["GPT-6.1 Sol and GPT-6 Astra"]
         direction TB
-        O1["3 neutral"]
-        O2["3 for the member"]
-        O3["3 for the insurer"]
+        O1["3 neutral encodings"]
+        O2["3 encodings for the member"]
+        O3["3 encodings for the insurer"]
     end
     T --> C & G & O
     C & G & O --> A{"Passes the clear<br/>CodeX tests?"}

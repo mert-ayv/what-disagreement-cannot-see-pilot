@@ -7,16 +7,23 @@ Author: Mert Ayvazoglu (TUM). All model outputs are kept.
 ## From the original exposé to the main experiment
 
 The original exposé (1 October 2026) assumed that LLMs make translation errors when they encode a coverage rule,
-and proposed a disagreement-driven loop to repair them. Three objections to it were tested first.
+and proposed a disagreement-driven loop to repair them. Three questions raised about it were tested first:
 
-| Step | Question | What was tested | What was found | What it meant |
-|---|---|---|---|---|
-| 1 | Do current models still make the errors the exposé wants to repair? | Kant et al.'s benchmark with current models; 14 guided encodings of the coverage (`PILOT_REPORT.md`) | 0.90 to 0.99 now vs 0.78 to 0.88 for the 2024 models; no threshold, age or partner errors | Translation is at ceiling; the repair loop has little left to repair |
-| 2 | The CodeX encoding is public: do the models just reproduce it from memory? | Paired edits to the policy text and the expert encoding (age split 35 to 37 with FSH 19 to 17; "or" to "and" with the FSH window 12 to 9 months) (`PILOT_REPORT.md`, experiment 2) | All 12 encodings follow the changed text on 100% of the cases where the variants differ | The models read the text rather than recall the encoding. The encodings in the main experiment also depart from CodeX's choices (e.g. Claude covers some men without a female partner), which copying would not produce |
-| 3 | Is a fixed input interface too strong an assumption? | Encodings where the models define their own input fields; a coverage agent that must ask for missing facts (`PILOT_REPORT.md`, `k4/`) | 54% of 185 self-defined fields matched the expert's; the main differences were facts the expert assumes and readings; one matching error; the agent answered all 8 plain-fact cases correctly and asked for 9 of 12 missing facts | Getting facts into variables mostly works; again the residue is readings |
-| 4 | So what remains? | Where encodings and direct answers still differ from the expert encoding | Points the policy text does not decide, for example whether a man without a female partner can qualify | The object of study becomes the **readings**, not the errors |
-| 5 | Can a model at least list those readings? | One discovery prompt (`k2/`); a coverage agent answering member questions (`k4b/`) | The prompt lists 7 of 7 recorded choices; while answering, the agent decides reading-dependent questions without flagging them (6 and 8 of 24) | Listing is easy; noticing while deciding is not |
-| 6 | Does disagreement between encodings reveal the readings? | Neutral encodings of one model family, compared case by case (`kA/`) | Almost not: each family resolves the open points the same way every time | A different instrument is needed: **opposing interests**, and other model families. That is the main experiment below |
+| Question | What was tested | What was found | What it meant |
+|---|---|---|---|
+| Do current models still make the errors the exposé wants to repair? | Kant et al.'s benchmark with current models; 14 guided encodings of the coverage (`PILOT_REPORT.md`) | 0.90 to 0.99 now vs 0.78 to 0.88 for the 2024 models; no threshold, age or partner errors | Translation is at ceiling; the repair loop has little left to repair |
+| The CodeX encoding is public: do the models just reproduce it from memory? | Paired edits to the policy text and the expert encoding (age split 35 to 37 with FSH 19 to 17; "or" to "and" with the FSH window 12 to 9 months) (`PILOT_REPORT.md`, experiment 2) | All 12 encodings follow the changed text on 100% of the cases where the variants differ | The models read the text rather than recall the encoding. The encodings in the main experiment also depart from CodeX's choices (e.g. Claude covers some men without a female partner), which copying would not produce |
+| Is a fixed input interface too strong an assumption? | Encodings where the models define their own input fields; a coverage agent that must ask for missing facts (`PILOT_REPORT.md`, `k4/`) | 54% of 185 self-defined fields matched the expert's; the main differences were facts the expert assumes and readings; one matching error; the agent answered all 8 plain-fact cases correctly and asked for 9 of 12 missing facts | Getting facts into variables mostly works; again the residue is readings |
+
+**What this led to.**
+1. Translation, memory and interface are not the problem. What remains are **readings**: points the policy text does
+   not decide, for example whether a man without a female partner can qualify (the glossary defines him as
+   infertile, the eligibility table has no row for him).
+2. A model can list such points when asked: one discovery prompt finds 7 of 7 recorded choices (`k2/`). But while
+   deciding member questions, a coverage agent resolves them without flagging them (6 and 8 of 24, `k4b/`).
+3. Comparing neutral encodings of one model family barely reveals them, because each family resolves the open points
+   almost always the same way (`kA/`). A different instrument is needed: encodings written for **opposing interests**,
+   and encodings by **other model families**. That is the main experiment.
 
 ## The main experiment in one minute (`kA/`)
 

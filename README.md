@@ -113,7 +113,7 @@ defines him as infertile, but the eligibility table has no row for him.
 
 Details, pre-registration and the GPT failure: `kA/FINDINGS.md`. Cross-family numbers: `kA/results/crossfamily.md`.
 
-## Research questions for the thesis
+## Revised research questions for the thesis
 Translation of the coverage is at ceiling; what remains are readings: points the policy text does not settle. Within
 one model family they are nearly fixed, so sampling one model again shows few of them; different families settle some
 of them differently. Encodings written for the member and for the insurer, or by other model families, reveal them. Three questions

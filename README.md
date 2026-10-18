@@ -59,6 +59,14 @@ only in one instruction:
 None may invent requirements or ignore clear ones, and every encoding must pass the clear CodeX test cases, so neither
 side can simply cover or deny everything.
 
+**Input variables.** All encodings read the same fixed set of claim fields: the variables of the CodeX encoding (service,
+dates of birth and service, sex and partner, months trying, donor cycles, FSH tests, semen analyses, and so on), plus
+one field CodeX lacks, the partner's sterilization, so that "you or your partner" can be tested. Helper functions
+compute age and date windows. The interface is fixed on purpose: every encoding then decides the same cases from the
+same facts, so differing outcomes come from readings, not from different variables. What changes without a fixed
+interface was tested separately (`kB/`): one model's encodings then diverge far more (Gemini: 0 to 30,154 cases), and
+new open points appear, such as whether "within the past 12 months" includes the boundary day.
+
 ```mermaid
 flowchart LR
     T["Policy text<br/>+ fixed input interface"]

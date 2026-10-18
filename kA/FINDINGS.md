@@ -1,6 +1,6 @@
 # Direction A one-day test: findings (2026-10-17)
 
-Pre-registration: `PREREGISTRATION.md`. Encodings: `encodings/` (9 fresh Claude agents: 3 neutral, 3 member's advocate,
+Pre-registration: `PREREGISTRATION.md`. Encodings: `encodings/` (9 fresh Claude Opus 5.5 agents: 3 neutral, 3 member's advocate,
 3 insurer's counsel; prompts `prompt_*.txt`, not published because they contain the policy text). Evaluation:
 `evaluate_A.py`; output `results/summary.md`. Grid: 907,200 boundary cases x partner sterilization yes/no = 1,814,400.
 

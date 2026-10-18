@@ -26,9 +26,9 @@ and proposed a disagreement-driven loop to repair them. Three questions **raised
    "we're assuming" (`k4b/`).
 3. Comparing neutral encodings of one model family barely reveals them, because each family resolves the open points
    almost always the same way (`kA/`). A different instrument is needed: encodings written for **opposing interests**,
-   and encodings by **other model families**. That is the main experiment.
+   and encodings by **other model families**. The main experiment below was designed around these findings.
 
-## The main experiment in one minute (`kA/`)
+## Main experiment: opposing interests and model families (`kA/`)
 
 Current models translate the coverage rule correctly. What they still differ on are **readings**: points where the
 policy text does not decide the case. The experiment asks how to find those points, and how AI systems fill them.
@@ -93,7 +93,7 @@ depend on an open point, so a side cannot simply cover or deny everything.
 
 Details, pre-registration and the GPT failure: `kA/FINDINGS.md`. Cross-family numbers: `kA/results/crossfamily.md`.
 
-## Tests, in order
+## All tests in detail
 
 | Folder | Question | Result |
 |---|---|---|
@@ -111,7 +111,7 @@ results are in `FINDINGS.md`, `results/VERDICT.md` or `results/scoring.md`. The 
 after the runs, so the git history does not timestamp the pre-registrations; the dates in the files do.
 Corrections made after red-team reviews are recorded in the findings files themselves.
 
-## What these results point to
+## Research questions for the thesis
 Translation of the coverage is at ceiling; what remains are readings: points the policy text does not settle. Within
 one model family they are nearly fixed, so sampling one model again shows few of them; different families settle some
 of them differently. Encodings written for opposite sides, or by other model families, reveal them. Three questions
@@ -124,7 +124,7 @@ follow:
 3. Which way do the expert encoding, different model families and a coverage agent resolve the points nothing settles, and
    what should an answer tell the member?
 
-## Not included (third-party material, fetch it yourself)
+## Not included (third-party material)
 - CodeX encoding and reference documents: https://github.com/codexstanford/cardinal-care-encoding (no licence
   declared). Clone into `data/cardinal-care-encoding/`. The Python port of the expert encoding (`src/expert.py`), which
   the scripts import, is not published here because the original carries no licence; it is available on request.

@@ -113,6 +113,19 @@ defines him as infertile, but the eligibility table has no row for him.
 
 Details, pre-registration and the GPT failure: `kA/FINDINGS.md`. Cross-family numbers: `kA/results/crossfamily.md`.
 
+## Research questions for the thesis
+Translation of the coverage is at ceiling; what remains are readings: points the policy text does not settle. Within
+one model family they are nearly fixed, so sampling one model again shows few of them; different families settle some
+of them differently. Encodings written for opposite sides, or by other model families, reveal them. Three questions
+follow:
+1. Where does an encoded rule leave room for the parties? Encoded for each side under an admissibility floor (the
+   clear CodeX test cases, departures justified from the text), where do the encodings diverge on a grid of
+   boundary cases, which side does each reading favour, and how much does disagreement within one model, or across
+   families, miss?
+2. Which of those points does the text, case law, official guidance or the insurer's recorded answer settle?
+3. Which way do the expert encoding, different model families and a coverage agent resolve the points nothing settles, and
+   what should an answer tell the member?
+
 ## All tests in detail
 
 | Folder | Question | Result |
@@ -130,19 +143,6 @@ Folders `k2/`, `k4/`, `k4b/`, `k9/`, `k15ctx/` and `kA/` contain a `PREREGISTRAT
 results are in `FINDINGS.md`, `results/VERDICT.md` or `results/scoring.md`. The repository was created on 2026-10-17
 after the runs, so the git history does not timestamp the pre-registrations; the dates in the files do.
 Corrections made after red-team reviews are recorded in the findings files themselves.
-
-## Research questions for the thesis
-Translation of the coverage is at ceiling; what remains are readings: points the policy text does not settle. Within
-one model family they are nearly fixed, so sampling one model again shows few of them; different families settle some
-of them differently. Encodings written for opposite sides, or by other model families, reveal them. Three questions
-follow:
-1. Where does an encoded rule leave room for the parties? Encoded for each side under an admissibility floor (the
-   clear CodeX test cases, departures justified from the text), where do the encodings diverge on a grid of
-   boundary cases, which side does each reading favour, and how much does disagreement within one model, or across
-   families, miss?
-2. Which of those points does the text, case law, official guidance or the insurer's recorded answer settle?
-3. Which way do the expert encoding, different model families and a coverage agent resolve the points nothing settles, and
-   what should an answer tell the member?
 
 ## Not included (third-party material)
 - CodeX encoding and reference documents: https://github.com/codexstanford/cardinal-care-encoding (no licence

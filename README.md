@@ -118,11 +118,8 @@ Translation of the coverage is at ceiling; what remains are readings: points the
 one model family they are nearly fixed, so sampling one model again shows few of them; different families settle some
 of them differently. Encodings written for the member and for the insurer, or by other model families, reveal them. Three questions
 follow:
-1. Where does an encoded rule leave room for the insured member and the insurer to reach different outcomes? When
-   the rule is encoded once in the member's favour and once in the insurer's favour (each encoding must still pass the
-   clear CodeX test cases and justify every reading from the text), on which boundary cases do the outcomes differ,
-   which side does each reading favour, and how much of this does disagreement within one model, or across model
-   families, miss?
+1. Where can the member and the insurer read an encoded rule to different outcomes, and how much of this does
+   disagreement within one model, or across model families, miss?
 2. Which of those points does the text, case law, official guidance or the insurer's recorded answer settle?
 3. Which way do the expert encoding, different model families and a coverage agent resolve the points nothing settles, and
    what should an answer tell the member?

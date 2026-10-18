@@ -12,6 +12,8 @@ Author: Mert Ayvazoglu (TUM). All model outputs are kept.
   split, the text is open (4 of 6 known open points for Claude, 5 of 6 for Gemini; GPT failed as pre-registered).
 - **Finding:** one model resolves open points almost identically every time, but model families differ, so the
   outcome can depend on the model deployed.
+- **Contribution:** a method that finds open points that comparing neutral model encodings misses, evidence that the
+  outcome depends on the model deployed, and public pre-registered tooling for both.
 - **Thesis:** classify each open point as settled by a source or genuinely open, and tell the member when an outcome
   depends on a reading.
 
